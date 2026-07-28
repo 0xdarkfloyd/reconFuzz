@@ -1,0 +1,12 @@
+{
+ "issue_id": 536581697,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Failed to open /nonexistent/path/file: No such file or directory in platform-lin",
+ "url": "https://issues.chromium.org/issues/536581697",
+ "testcase_ids": [
+  "4584791060021248"
+ ],
+ "downloaded": [
+  "4584791060021248"
+ ]
+}

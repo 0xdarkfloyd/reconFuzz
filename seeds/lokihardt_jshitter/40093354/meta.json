@@ -1,0 +1,12 @@
+{
+ "issue_id": 40093354,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in HasIncomingBackEdges(block) implies block_effects.For(block->PredecessorAt(0), b",
+ "url": "https://issues.chromium.org/issues/40093354",
+ "testcase_ids": [
+  "6321162667425792"
+ ],
+ "downloaded": [
+  "6321162667425792"
+ ]
+}

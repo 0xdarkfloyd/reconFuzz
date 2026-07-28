@@ -1,0 +1,12 @@
+{
+ "issue_id": 41488827,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Fatal error in Found invalid Object (instance_type=218) in large object space in large-spaces.c",
+ "url": "https://issues.chromium.org/issues/41488827",
+ "testcase_ids": [
+  "5378093840007168"
+ ],
+ "downloaded": [
+  "5378093840007168"
+ ]
+}

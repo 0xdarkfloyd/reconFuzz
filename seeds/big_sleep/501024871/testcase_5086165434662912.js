@@ -1,0 +1,1 @@
+  %DebugPrintGeneric("label", 0, 0, 0, 0, 0x10000, 1);

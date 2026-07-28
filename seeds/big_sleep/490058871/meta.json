@@ -1,0 +1,12 @@
+{
+ "issue_id": 490058871,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in 0 == level_ in mutex.cc",
+ "url": "https://issues.chromium.org/issues/490058871",
+ "testcase_ids": [
+  "4707931287126016"
+ ],
+ "downloaded": [
+  "4707931287126016"
+ ]
+}

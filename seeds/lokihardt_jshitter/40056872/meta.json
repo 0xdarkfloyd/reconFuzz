@@ -1,0 +1,12 @@
+{
+ "issue_id": 40056872,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in native_module == current_native_module_ in code-space-access.cc",
+ "url": "https://issues.chromium.org/issues/40056872",
+ "testcase_ids": [
+  "5684394512416768"
+ ],
+ "downloaded": [
+  "5684394512416768"
+ ]
+}

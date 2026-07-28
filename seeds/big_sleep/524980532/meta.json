@@ -1,0 +1,12 @@
+{
+ "issue_id": 524980532,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Command-line provided flag --enable-os-system is prohibited by --disallow-unsafe",
+ "url": "https://issues.chromium.org/issues/524980532",
+ "testcase_ids": [
+  "5991272967864320"
+ ],
+ "downloaded": [
+  "5991272967864320"
+ ]
+}

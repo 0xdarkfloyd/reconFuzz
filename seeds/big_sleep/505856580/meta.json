@@ -1,0 +1,12 @@
+{
+ "issue_id": 505856580,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Empty MaybeLocal",
+ "url": "https://issues.chromium.org/issues/505856580",
+ "testcase_ids": [
+  "5316916612726784"
+ ],
+ "downloaded": [
+  "5316916612726784"
+ ]
+}

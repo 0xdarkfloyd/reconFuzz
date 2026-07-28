@@ -1,0 +1,12 @@
+{
+ "issue_id": 40645468,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: Bytecode mismatch at offset 0 in interpreter.cc",
+ "url": "https://issues.chromium.org/issues/40645468",
+ "testcase_ids": [
+  "5767101284745216"
+ ],
+ "downloaded": [
+  "5767101284745216"
+ ]
+}

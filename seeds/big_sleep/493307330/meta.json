@@ -1,0 +1,12 @@
+{
+ "issue_id": 493307330,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in start_position <= end_position in pending-compilation-error-handler.cc",
+ "url": "https://issues.chromium.org/issues/493307330",
+ "testcase_ids": [
+  "5926019915612160"
+ ],
+ "downloaded": [
+  "5926019915612160"
+ ]
+}

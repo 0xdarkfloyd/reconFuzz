@@ -1,0 +1,12 @@
+{
+ "issue_id": 40093379,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in HAS_SMI_TAG(ptr) in smi.h",
+ "url": "https://issues.chromium.org/issues/40093379",
+ "testcase_ids": [
+  "5134236073590784"
+ ],
+ "downloaded": [
+  "5134236073590784"
+ ]
+}

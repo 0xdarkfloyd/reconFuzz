@@ -1,0 +1,12 @@
+{
+ "issue_id": 518229528,
+ "fuzzer": "big_sleep",
+ "title": "Unreachable code in instruction-selector.cc for struct.atomic_get with compressed result representation",
+ "url": "https://issues.chromium.org/issues/518229528",
+ "testcase_ids": [
+  "5170985955262464"
+ ],
+ "downloaded": [
+  "5170985955262464"
+ ]
+}

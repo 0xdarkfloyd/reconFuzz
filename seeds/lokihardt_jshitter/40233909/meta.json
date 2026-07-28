@@ -1,0 +1,12 @@
+{
+ "issue_id": 40233909,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Fatal error in d8: Received SIGTERM signal (likely due to a TIMEOUT) in d8.cc",
+ "url": "https://issues.chromium.org/issues/40233909",
+ "testcase_ids": [
+  "5352592072966144"
+ ],
+ "downloaded": [
+  "5352592072966144"
+ ]
+}

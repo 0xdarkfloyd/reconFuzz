@@ -1,0 +1,12 @@
+{
+ "issue_id": 40057433,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in \\\\' == current() in regexp-parser.cc",
+ "url": "https://issues.chromium.org/issues/40057433",
+ "testcase_ids": [
+  "5605522746966016"
+ ],
+ "downloaded": [
+  "5605522746966016"
+ ]
+}

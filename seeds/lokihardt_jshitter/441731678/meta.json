@@ -1,0 +1,12 @@
+{
+ "issue_id": 441731678,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in !SafeIsAnyHole(obj) in heap-object-inl.h",
+ "url": "https://issues.chromium.org/issues/441731678",
+ "testcase_ids": [
+  "4920690654248960"
+ ],
+ "downloaded": [
+  "4920690654248960"
+ ]
+}

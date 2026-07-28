@@ -1,0 +1,12 @@
+{
+ "issue_id": 537813778,
+ "fuzzer": "big_sleep",
+ "title": "ASSERT: CSA_DCHECK failed: Uint32LessThanOrEqual(UncheckedCast<Uint32T>(value), Uint32Co",
+ "url": "https://issues.chromium.org/issues/537813778",
+ "testcase_ids": [
+  "5998670034010112"
+ ],
+ "downloaded": [
+  "5998670034010112"
+ ]
+}

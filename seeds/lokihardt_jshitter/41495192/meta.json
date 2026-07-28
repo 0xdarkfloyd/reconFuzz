@@ -1,0 +1,12 @@
+{
+ "issue_id": 41495192,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Unexpected memory mapping 0x5c6ae75ba000-0x5c6ae7b96000 with empty stacktrace",
+ "url": "https://issues.chromium.org/issues/41495192",
+ "testcase_ids": [
+  "5160390729596928"
+ ],
+ "downloaded": [
+  "5160390729596928"
+ ]
+}

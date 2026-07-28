@@ -1,0 +1,12 @@
+{
+ "issue_id": 460946135,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in ReachingTypeAllows(NodeType::kNumber) in maglev-reducer-inl.h",
+ "url": "https://issues.chromium.org/issues/460946135",
+ "testcase_ids": [
+  "4525308497559552"
+ ],
+ "downloaded": [
+  "4525308497559552"
+ ]
+}

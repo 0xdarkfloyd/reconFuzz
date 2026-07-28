@@ -1,0 +1,12 @@
+{
+ "issue_id": 499325893,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Cycle in flag implications: in flags.cc",
+ "url": "https://issues.chromium.org/issues/499325893",
+ "testcase_ids": [
+  "4646941241671680"
+ ],
+ "downloaded": [
+  "4646941241671680"
+ ]
+}

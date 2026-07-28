@@ -1,0 +1,12 @@
+{
+ "issue_id": 40230915,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Fatal error in SimplifiedLoweringVerifierError: verified type (MinusZero | Range(-NUMBER, NUMBE",
+ "url": "https://issues.chromium.org/issues/40230915",
+ "testcase_ids": [
+  "5545677488848896"
+ ],
+ "downloaded": [
+  "5545677488848896"
+ ]
+}

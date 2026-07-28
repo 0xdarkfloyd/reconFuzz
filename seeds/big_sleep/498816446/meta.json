@@ -1,0 +1,12 @@
+{
+ "issue_id": 498816446,
+ "fuzzer": "big_sleep",
+ "title": "Unreachable code in maglev-graph-builder.cc",
+ "url": "https://issues.chromium.org/issues/498816446",
+ "testcase_ids": [
+  "5001900659343360"
+ ],
+ "downloaded": [
+  "5001900659343360"
+ ]
+}

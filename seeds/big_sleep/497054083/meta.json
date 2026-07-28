@@ -1,0 +1,10 @@
+{
+ "issue_id": 497054083,
+ "fuzzer": "big_sleep",
+ "title": "V8 sandbox violation in double v8::FastCApiObject::AddAllTypedArrayFastCallback<unsigned char>",
+ "url": "https://issues.chromium.org/issues/497054083",
+ "testcase_ids": [
+  "5417960986411008"
+ ],
+ "downloaded": []
+}

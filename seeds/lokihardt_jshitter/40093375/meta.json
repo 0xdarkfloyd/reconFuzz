@@ -1,0 +1,12 @@
+{
+ "issue_id": 40093375,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in !failed_ in asm-parser.cc",
+ "url": "https://issues.chromium.org/issues/40093375",
+ "testcase_ids": [
+  "5425804189892608"
+ ],
+ "downloaded": [
+  "5425804189892608"
+ ]
+}

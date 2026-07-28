@@ -1,0 +1,12 @@
+{
+ "issue_id": 516717476,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Repeated specification of d8 flag --repeat-compile in d8.h",
+ "url": "https://issues.chromium.org/issues/516717476",
+ "testcase_ids": [
+  "5979273164783616"
+ ],
+ "downloaded": [
+  "5979273164783616"
+ ]
+}

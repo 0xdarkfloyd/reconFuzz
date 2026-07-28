@@ -1,0 +1,12 @@
+{
+ "issue_id": 40093550,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: U_SUCCESS(status) in intl-objects.cc",
+ "url": "https://issues.chromium.org/issues/40093550",
+ "testcase_ids": [
+  "5699367375470592"
+ ],
+ "downloaded": [
+  "5699367375470592"
+ ]
+}

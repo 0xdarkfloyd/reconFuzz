@@ -1,0 +1,12 @@
+{
+ "issue_id": 40109586,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Null-dereference WRITE in v8::internal::Scope::DeclareVariable",
+ "url": "https://issues.chromium.org/issues/40109586",
+ "testcase_ids": [
+  "5652465613406208"
+ ],
+ "downloaded": [
+  "5652465613406208"
+ ]
+}

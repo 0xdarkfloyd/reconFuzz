@@ -1,0 +1,12 @@
+{
+ "issue_id": 503096789,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: type == StackFrame::WASM in wasm-external-refs.cc",
+ "url": "https://issues.chromium.org/issues/503096789",
+ "testcase_ids": [
+  "5359504703127552"
+ ],
+ "downloaded": [
+  "5359504703127552"
+ ]
+}

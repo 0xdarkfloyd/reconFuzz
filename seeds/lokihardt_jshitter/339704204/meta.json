@@ -1,0 +1,12 @@
+{
+ "issue_id": 339704204,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Null-dereference READ in v8::internal::maglev::ValueNode::add_use",
+ "url": "https://issues.chromium.org/issues/339704204",
+ "testcase_ids": [
+  "6190140603957248"
+ ],
+ "downloaded": [
+  "6190140603957248"
+ ]
+}

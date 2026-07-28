@@ -1,0 +1,12 @@
+{
+ "issue_id": 41477832,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "ASSERT: CSA_ASSERT failed: Word32Equal(DecodeWord32<PropertyDetails::KindField>(details)",
+ "url": "https://issues.chromium.org/issues/41477832",
+ "testcase_ids": [
+  "5094236570910720"
+ ],
+ "downloaded": [
+  "5094236570910720"
+ ]
+}

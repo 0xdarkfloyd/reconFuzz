@@ -1,0 +1,12 @@
+{
+ "issue_id": 499332350,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in code->is_liftoff() in runtime-test-wasm.cc",
+ "url": "https://issues.chromium.org/issues/499332350",
+ "testcase_ids": [
+  "5957558833545216"
+ ],
+ "downloaded": [
+  "5957558833545216"
+ ]
+}

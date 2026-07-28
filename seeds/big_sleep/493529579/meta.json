@@ -1,0 +1,12 @@
+{
+ "issue_id": 493529579,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in has_parent() in wasm-objects-inl.h",
+ "url": "https://issues.chromium.org/issues/493529579",
+ "testcase_ids": [
+  "6399871980437504"
+ ],
+ "downloaded": [
+  "6399871980437504"
+ ]
+}

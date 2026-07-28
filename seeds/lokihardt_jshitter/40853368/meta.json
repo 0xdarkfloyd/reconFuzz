@@ -1,0 +1,12 @@
+{
+ "issue_id": 40853368,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: reservation_.Free(reinterpret_cast<void*>(address), size) in virtual-address-spa",
+ "url": "https://issues.chromium.org/issues/40853368",
+ "testcase_ids": [
+  "6588843256119296"
+ ],
+ "downloaded": [
+  "6588843256119296"
+ ]
+}

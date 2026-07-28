@@ -1,0 +1,12 @@
+{
+ "issue_id": 40050551,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in current->next == current->limit in handles-inl.h",
+ "url": "https://issues.chromium.org/issues/40050551",
+ "testcase_ids": [
+  "6138324651474944"
+ ],
+ "downloaded": [
+  "6138324651474944"
+ ]
+}

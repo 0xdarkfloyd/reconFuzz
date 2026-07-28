@@ -1,0 +1,12 @@
+{
+ "issue_id": 420437007,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Fatal error in Type cast failed in Parameter 0 at ../../src/builtins/builtins-number-gen.cc:273",
+ "url": "https://issues.chromium.org/issues/420437007",
+ "testcase_ids": [
+  "4576736205275136"
+ ],
+ "downloaded": [
+  "4576736205275136"
+ ]
+}

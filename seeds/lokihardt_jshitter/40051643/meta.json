@@ -1,0 +1,12 @@
+{
+ "issue_id": 40051643,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Heap-use-after-free in v8::internal::RegExpMacroAssemblerARM64::~RegExpMacroAssemblerARM64",
+ "url": "https://issues.chromium.org/issues/40051643",
+ "testcase_ids": [
+  "5707472246472704"
+ ],
+ "downloaded": [
+  "5707472246472704"
+ ]
+}

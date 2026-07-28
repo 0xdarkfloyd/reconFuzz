@@ -1,0 +1,12 @@
+{
+ "issue_id": 513047083,
+ "fuzzer": "big_sleep",
+ "title": "Unreachable code in wasm-engine.cc",
+ "url": "https://issues.chromium.org/issues/513047083",
+ "testcase_ids": [
+  "4790790618382336"
+ ],
+ "downloaded": [
+  "4790790618382336"
+ ]
+}

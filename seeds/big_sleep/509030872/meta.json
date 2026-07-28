@@ -1,0 +1,12 @@
+{
+ "issue_id": 509030872,
+ "fuzzer": "big_sleep",
+ "title": "ASSERT: CSA_DCHECK failed: Torque assert 'IsResizableArrayBuffer(o) || o.max_byte_length",
+ "url": "https://issues.chromium.org/issues/509030872",
+ "testcase_ids": [
+  "6677780808892416"
+ ],
+ "downloaded": [
+  "6677780808892416"
+ ]
+}

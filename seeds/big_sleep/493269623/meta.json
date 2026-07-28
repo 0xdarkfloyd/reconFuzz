@@ -1,0 +1,12 @@
+{
+ "issue_id": 493269623,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in !global_proxy->IsDetachedFrom(global_object) in api-callbacks-inl.h",
+ "url": "https://issues.chromium.org/issues/493269623",
+ "testcase_ids": [
+  "5099373063077888"
+ ],
+ "downloaded": [
+  "5099373063077888"
+ ]
+}

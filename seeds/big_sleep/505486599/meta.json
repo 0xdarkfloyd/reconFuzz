@@ -1,0 +1,12 @@
+{
+ "issue_id": 505486599,
+ "fuzzer": "big_sleep",
+ "title": "ASSERT: CSA_DCHECK failed: TaggedEqual(back, native_context)",
+ "url": "https://issues.chromium.org/issues/505486599",
+ "testcase_ids": [
+  "5093888758939648"
+ ],
+ "downloaded": [
+  "5093888758939648"
+ ]
+}

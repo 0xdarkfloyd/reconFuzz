@@ -1,0 +1,12 @@
+{
+ "issue_id": 40054596,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in expr->scope()->outer_scope() == current_scope() in bytecode-generator.cc",
+ "url": "https://issues.chromium.org/issues/40054596",
+ "testcase_ids": [
+  "6488262574407680"
+ ],
+ "downloaded": [
+  "6488262574407680"
+ ]
+}

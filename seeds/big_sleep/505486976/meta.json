@@ -1,0 +1,12 @@
+{
+ "issue_id": 505486976,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Trap-based sandbox fuzzing is not available on this platform in d8.cc",
+ "url": "https://issues.chromium.org/issues/505486976",
+ "testcase_ids": [
+  "5170583989944320"
+ ],
+ "downloaded": [
+  "5170583989944320"
+ ]
+}

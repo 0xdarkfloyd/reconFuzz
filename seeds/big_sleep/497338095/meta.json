@@ -1,0 +1,12 @@
+{
+ "issue_id": 497338095,
+ "fuzzer": "big_sleep",
+ "title": "ASSERT: CSA_DCHECK failed: IsJSModuleNamespace(exports_arg)",
+ "url": "https://issues.chromium.org/issues/497338095",
+ "testcase_ids": [
+  "4510049091223552"
+ ],
+ "downloaded": [
+  "4510049091223552"
+ ]
+}

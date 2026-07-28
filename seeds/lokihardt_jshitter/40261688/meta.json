@@ -1,0 +1,12 @@
+{
+ "issue_id": 40261688,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Crash in v8::internal::PropertyCallbackArguments::CallAccessorGetter",
+ "url": "https://issues.chromium.org/issues/40261688",
+ "testcase_ids": [
+  "5158728777793536"
+ ],
+ "downloaded": [
+  "5158728777793536"
+ ]
+}

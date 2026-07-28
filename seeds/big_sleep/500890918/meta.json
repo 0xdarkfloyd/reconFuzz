@@ -1,0 +1,12 @@
+{
+ "issue_id": 500890918,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in isolates_.empty() in wasm-engine.cc",
+ "url": "https://issues.chromium.org/issues/500890918",
+ "testcase_ids": [
+  "4549921487224832"
+ ],
+ "downloaded": [
+  "4549921487224832"
+ ]
+}

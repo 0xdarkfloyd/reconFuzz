@@ -1,0 +1,12 @@
+{
+ "issue_id": 494203673,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in Holder<To> v8::internal::TrustedCast(Holder<From>, SourceLocation) [To = v8::int",
+ "url": "https://issues.chromium.org/issues/494203673",
+ "testcase_ids": [
+  "4879222233300992"
+ ],
+ "downloaded": [
+  "4879222233300992"
+ ]
+}

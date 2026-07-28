@@ -1,0 +1,12 @@
+{
+ "issue_id": 520777574,
+ "fuzzer": "big_sleep",
+ "title": "Null-dereference READ in v8_internal_simulator_ProbeMemory",
+ "url": "https://issues.chromium.org/issues/520777574",
+ "testcase_ids": [
+  "6123034947649536"
+ ],
+ "downloaded": [
+  "6123034947649536"
+ ]
+}

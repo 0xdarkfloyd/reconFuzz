@@ -1,0 +1,12 @@
+{
+ "issue_id": 508972215,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Command-line provided flag --simulate-errors is prohibited by --disallow-unsafe-",
+ "url": "https://issues.chromium.org/issues/508972215",
+ "testcase_ids": [
+  "5348608689864704"
+ ],
+ "downloaded": [
+  "5348608689864704"
+ ]
+}

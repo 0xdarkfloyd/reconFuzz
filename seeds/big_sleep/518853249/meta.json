@@ -1,0 +1,12 @@
+{
+ "issue_id": 518853249,
+ "fuzzer": "big_sleep",
+ "title": "ASSERT: CSA_DCHECK failed: IntPtrEqual(substr_length, string_length)",
+ "url": "https://issues.chromium.org/issues/518853249",
+ "testcase_ids": [
+  "4780254124081152"
+ ],
+ "downloaded": [
+  "4780254124081152"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 40629227,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Ill in v8::internal::compiler::JSHeapBroker::GetFeedback",
+ "url": "https://issues.chromium.org/issues/40629227",
+ "testcase_ids": [
+  "5724010886856704"
+ ],
+ "downloaded": [
+  "5724010886856704"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 500113958,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Type cast failed in CAST(ConstructJS(Builtin::kConstruct, context, target, new_t",
+ "url": "https://issues.chromium.org/issues/500113958",
+ "testcase_ids": [
+  "4564127896862720"
+ ],
+ "downloaded": [
+  "4564127896862720"
+ ]
+}

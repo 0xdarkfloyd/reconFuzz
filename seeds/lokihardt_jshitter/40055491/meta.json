@@ -1,0 +1,12 @@
+{
+ "issue_id": 40055491,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in is_uint24(target24) in assembler-arm.cc",
+ "url": "https://issues.chromium.org/issues/40055491",
+ "testcase_ids": [
+  "4914605666402304"
+ ],
+ "downloaded": [
+  "4914605666402304"
+ ]
+}

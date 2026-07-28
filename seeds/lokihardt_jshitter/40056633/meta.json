@@ -1,0 +1,12 @@
+{
+ "issue_id": 40056633,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: Promise::kPending == promise->status() in objects.cc",
+ "url": "https://issues.chromium.org/issues/40056633",
+ "testcase_ids": [
+  "5675770201309184"
+ ],
+ "downloaded": [
+  "5675770201309184"
+ ]
+}

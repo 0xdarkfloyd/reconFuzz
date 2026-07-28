@@ -1,0 +1,12 @@
+{
+ "issue_id": 40256660,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: black_size <= marking_state->live_bytes(page) in paged-spaces.cc",
+ "url": "https://issues.chromium.org/issues/40256660",
+ "testcase_ids": [
+  "6747863676813312"
+ ],
+ "downloaded": [
+  "6747863676813312"
+ ]
+}

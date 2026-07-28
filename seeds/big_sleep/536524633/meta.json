@@ -1,0 +1,12 @@
+{
+ "issue_id": 536524633,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Type cast failed in CAST(FastLoadLastIndexBeforeSmiCheck(regexp)) at ../../src/b",
+ "url": "https://issues.chromium.org/issues/536524633",
+ "testcase_ids": [
+  "5031467658805248"
+ ],
+ "downloaded": [
+  "5031467658805248"
+ ]
+}

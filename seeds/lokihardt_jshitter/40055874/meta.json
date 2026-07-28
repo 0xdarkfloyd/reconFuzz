@@ -1,0 +1,12 @@
+{
+ "issue_id": 40055874,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Trap in Builtins_JSEntryTrampoline",
+ "url": "https://issues.chromium.org/issues/40055874",
+ "testcase_ids": [
+  "5671768367628288"
+ ],
+ "downloaded": [
+  "5671768367628288"
+ ]
+}

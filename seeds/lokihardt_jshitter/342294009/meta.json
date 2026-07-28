@@ -1,0 +1,12 @@
+{
+ "issue_id": 342294009,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in !i::IsHole(*object()) in heap-refs.cc",
+ "url": "https://issues.chromium.org/issues/342294009",
+ "testcase_ids": [
+  "6602418664964096"
+ ],
+ "downloaded": [
+  "6602418664964096"
+ ]
+}

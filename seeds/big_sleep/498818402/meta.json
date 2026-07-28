@@ -1,0 +1,12 @@
+{
+ "issue_id": 498818402,
+ "fuzzer": "big_sleep",
+ "title": "Crash in v8::internal::Heap::Contains",
+ "url": "https://issues.chromium.org/issues/498818402",
+ "testcase_ids": [
+  "6602752981499904"
+ ],
+ "downloaded": [
+  "6602752981499904"
+ ]
+}

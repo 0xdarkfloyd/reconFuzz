@@ -1,0 +1,12 @@
+{
+ "issue_id": 518853251,
+ "fuzzer": "big_sleep",
+ "title": "Abrt in v8::internal::wasm::TurboshaftGraphBuildingInterface::ArrayNewSegment",
+ "url": "https://issues.chromium.org/issues/518853251",
+ "testcase_ids": [
+  "5667074911272960"
+ ],
+ "downloaded": [
+  "5667074911272960"
+ ]
+}

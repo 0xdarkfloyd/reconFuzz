@@ -1,0 +1,12 @@
+{
+ "issue_id": 503669251,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: 0x1 << hit_watchpoint == dr6 & 0xf",
+ "url": "https://issues.chromium.org/issues/503669251",
+ "testcase_ids": [
+  "6098800108142592"
+ ],
+ "downloaded": [
+  "6098800108142592"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 493591676,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: !maybe_result.IsEmpty() in d8.cc",
+ "url": "https://issues.chromium.org/issues/493591676",
+ "testcase_ids": [
+  "6267302982909952"
+ ],
+ "downloaded": [
+  "6267302982909952"
+ ]
+}

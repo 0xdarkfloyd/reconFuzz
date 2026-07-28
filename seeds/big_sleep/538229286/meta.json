@@ -1,0 +1,12 @@
+{
+ "issue_id": 538229286,
+ "fuzzer": "big_sleep",
+ "title": "Null-dereference WRITE with empty stacktrace",
+ "url": "https://issues.chromium.org/issues/538229286",
+ "testcase_ids": [
+  "5729623753129984"
+ ],
+ "downloaded": [
+  "5729623753129984"
+ ]
+}

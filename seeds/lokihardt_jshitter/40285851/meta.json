@@ -1,0 +1,12 @@
+{
+ "issue_id": 40285851,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Fatal error in Type representation error: node CheckString (input @0 = Float64Add) type Float64",
+ "url": "https://issues.chromium.org/issues/40285851",
+ "testcase_ids": [
+  "5753434171441152"
+ ],
+ "downloaded": [
+  "5753434171441152"
+ ]
+}

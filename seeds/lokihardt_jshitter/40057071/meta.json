@@ -1,0 +1,12 @@
+{
+ "issue_id": 40057071,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in !has_rest_ || var != rest_parameter() in scopes.cc",
+ "url": "https://issues.chromium.org/issues/40057071",
+ "testcase_ids": [
+  "5698031482372096"
+ ],
+ "downloaded": [
+  "5698031482372096"
+ ]
+}

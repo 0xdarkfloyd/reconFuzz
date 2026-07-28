@@ -1,0 +1,12 @@
+{
+ "issue_id": 501198842,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in string->IsFlat() in string-inl.h",
+ "url": "https://issues.chromium.org/issues/501198842",
+ "testcase_ids": [
+  "6436173614448640"
+ ],
+ "downloaded": [
+  "6436173614448640"
+ ]
+}

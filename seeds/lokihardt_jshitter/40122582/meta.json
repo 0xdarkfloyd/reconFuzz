@@ -1,0 +1,12 @@
+{
+ "issue_id": 40122582,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Trap in Builtins_CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit",
+ "url": "https://issues.chromium.org/issues/40122582",
+ "testcase_ids": [
+  "5741677259063296"
+ ],
+ "downloaded": [
+  "5741677259063296"
+ ]
+}

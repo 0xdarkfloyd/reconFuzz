@@ -1,0 +1,12 @@
+{
+ "issue_id": 493171989,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in memory_order != AtomicMemoryOrder::kAcqRel in wasm-lowering-reducer.h",
+ "url": "https://issues.chromium.org/issues/493171989",
+ "testcase_ids": [
+  "5934604749832192"
+ ],
+ "downloaded": [
+  "5934604749832192"
+ ]
+}

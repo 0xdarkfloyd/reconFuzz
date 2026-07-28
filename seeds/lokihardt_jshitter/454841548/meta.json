@@ -1,0 +1,12 @@
+{
+ "issue_id": 454841548,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in left != right in macro-assembler-arm.cc",
+ "url": "https://issues.chromium.org/issues/454841548",
+ "testcase_ids": [
+  "5157672571568128"
+ ],
+ "downloaded": [
+  "5157672571568128"
+ ]
+}

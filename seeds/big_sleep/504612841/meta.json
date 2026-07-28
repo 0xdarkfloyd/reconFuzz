@@ -1,0 +1,12 @@
+{
+ "issue_id": 504612841,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Executing non-BTI instruction with wrong BType in simulator-arm64.h",
+ "url": "https://issues.chromium.org/issues/504612841",
+ "testcase_ids": [
+  "4557614495072256"
+ ],
+ "downloaded": [
+  "4557614495072256"
+ ]
+}

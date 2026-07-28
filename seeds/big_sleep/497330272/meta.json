@@ -1,0 +1,12 @@
+{
+ "issue_id": 497330272,
+ "fuzzer": "big_sleep",
+ "title": "Crash in Builtins_JSToWasmWrapperAsm",
+ "url": "https://issues.chromium.org/issues/497330272",
+ "testcase_ids": [
+  "6211977126903808"
+ ],
+ "downloaded": [
+  "6211977126903808"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 493634179,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in potentially_dead_code_.empty() in wasm-engine.cc",
+ "url": "https://issues.chromium.org/issues/493634179",
+ "testcase_ids": [
+  "5618732453888000"
+ ],
+ "downloaded": [
+  "5618732453888000"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 496638098,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in Smi::IsValid(value) in smi.h",
+ "url": "https://issues.chromium.org/issues/496638098",
+ "testcase_ids": [
+  "4772498604326912"
+ ],
+ "downloaded": [
+  "4772498604326912"
+ ]
+}

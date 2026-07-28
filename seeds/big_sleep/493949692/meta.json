@@ -1,0 +1,12 @@
+{
+ "issue_id": 493949692,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in Isolate::TryGetCurrent() == isolate_ in heap.cc",
+ "url": "https://issues.chromium.org/issues/493949692",
+ "testcase_ids": [
+  "5934584885706752"
+ ],
+ "downloaded": [
+  "5934584885706752"
+ ]
+}

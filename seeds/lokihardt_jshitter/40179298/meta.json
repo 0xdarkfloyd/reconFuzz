@@ -1,0 +1,12 @@
+{
+ "issue_id": 40179298,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Trap in void v8::internal::compiler::RepresentationSelector::SetOutput<",
+ "url": "https://issues.chromium.org/issues/40179298",
+ "testcase_ids": [
+  "5126916143906816"
+ ],
+ "downloaded": [
+  "5126916143906816"
+ ]
+}

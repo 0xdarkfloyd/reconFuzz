@@ -1,0 +1,12 @@
+{
+ "issue_id": 40094366,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: !result.failed() in wasm-engine.cc",
+ "url": "https://issues.chromium.org/issues/40094366",
+ "testcase_ids": [
+  "5124911310962688"
+ ],
+ "downloaded": [
+  "5124911310962688"
+ ]
+}

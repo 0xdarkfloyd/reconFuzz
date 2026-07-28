@@ -1,0 +1,12 @@
+{
+ "issue_id": 40098340,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Fatal error in v8::ToLocalCheckedv8::Utils::ReportApiFailure",
+ "url": "https://issues.chromium.org/issues/40098340",
+ "testcase_ids": [
+  "5682118773309440"
+ ],
+ "downloaded": [
+  "5682118773309440"
+ ]
+}

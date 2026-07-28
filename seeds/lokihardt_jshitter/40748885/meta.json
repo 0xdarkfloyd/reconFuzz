@@ -1,0 +1,12 @@
+{
+ "issue_id": 40748885,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in size <= Heap::MaxRegularHeapObjectSize(allocation) in allocation-builder.h",
+ "url": "https://issues.chromium.org/issues/40748885",
+ "testcase_ids": [
+  "5724151420354560"
+ ],
+ "downloaded": [
+  "5724151420354560"
+ ]
+}

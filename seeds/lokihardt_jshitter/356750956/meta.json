@@ -1,0 +1,12 @@
+{
+ "issue_id": 356750956,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: IsSmi(prototype_validity_cell__value) || IsCell(prototype_validity_cell__value)",
+ "url": "https://issues.chromium.org/issues/356750956",
+ "testcase_ids": [
+  "5165546519592960"
+ ],
+ "downloaded": [
+  "5165546519592960"
+ ]
+}

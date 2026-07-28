@@ -1,0 +1,12 @@
+{
+ "issue_id": 505124866,
+ "fuzzer": "big_sleep",
+ "title": "Unreachable code in wasm-revec-reducer.h",
+ "url": "https://issues.chromium.org/issues/505124866",
+ "testcase_ids": [
+  "6428249634570240"
+ ],
+ "downloaded": [
+  "6428249634570240"
+ ]
+}

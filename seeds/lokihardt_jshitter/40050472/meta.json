@@ -1,0 +1,12 @@
+{
+ "issue_id": 40050472,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: Object is not known to the heap broker in js-heap-broker.cc",
+ "url": "https://issues.chromium.org/issues/40050472",
+ "testcase_ids": [
+  "5126549344747520"
+ ],
+ "downloaded": [
+  "5126549344747520"
+ ]
+}

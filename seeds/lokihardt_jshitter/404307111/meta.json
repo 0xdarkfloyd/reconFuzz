@@ -1,0 +1,12 @@
+{
+ "issue_id": 404307111,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: !v8::internal::v8_flags.enable_slow_asserts.value() || (!(kUninterestingPagesCan",
+ "url": "https://issues.chromium.org/issues/404307111",
+ "testcase_ids": [
+  "5444224539361280"
+ ],
+ "downloaded": [
+  "5444224539361280"
+ ]
+}

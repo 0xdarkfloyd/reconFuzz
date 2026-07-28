@@ -1,0 +1,12 @@
+{
+ "issue_id": 40093025,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Ill in v8::internal::AstTraversalVisitor<v8::internal::AstFunctionLiteralIdReindexer>::",
+ "url": "https://issues.chromium.org/issues/40093025",
+ "testcase_ids": [
+  "6198951751188480"
+ ],
+ "downloaded": [
+  "6198951751188480"
+ ]
+}

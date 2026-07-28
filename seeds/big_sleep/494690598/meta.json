@@ -1,0 +1,12 @@
+{
+ "issue_id": 494690598,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in visited.empty() && inputs.empty() in wasm-revec-reducer.h",
+ "url": "https://issues.chromium.org/issues/494690598",
+ "testcase_ids": [
+  "4967519714574336"
+ ],
+ "downloaded": [
+  "4967519714574336"
+ ]
+}

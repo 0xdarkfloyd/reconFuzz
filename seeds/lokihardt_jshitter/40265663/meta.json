@@ -1,0 +1,12 @@
+{
+ "issue_id": 40265663,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Abrt in v8::internal::Isolate::PushStackTraceAndDie",
+ "url": "https://issues.chromium.org/issues/40265663",
+ "testcase_ids": [
+  "6738959483469824"
+ ],
+ "downloaded": [
+  "6738959483469824"
+ ]
+}

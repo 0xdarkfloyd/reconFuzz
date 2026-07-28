@@ -1,0 +1,12 @@
+{
+ "issue_id": 40050638,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Crash in Builtins_InterpreterEntryTrampoline",
+ "url": "https://issues.chromium.org/issues/40050638",
+ "testcase_ids": [
+  "6414697769074688"
+ ],
+ "downloaded": [
+  "6414697769074688"
+ ]
+}

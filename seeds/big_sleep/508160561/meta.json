@@ -1,0 +1,12 @@
+{
+ "issue_id": 508160561,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in --liftoff-only: treating bailout as fatal error. Cause: unimplemented Liftoff in",
+ "url": "https://issues.chromium.org/issues/508160561",
+ "testcase_ids": [
+  "5463443716997120"
+ ],
+ "downloaded": [
+  "5463443716997120"
+ ]
+}

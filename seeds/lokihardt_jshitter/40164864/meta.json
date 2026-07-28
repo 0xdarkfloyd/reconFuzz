@@ -1,0 +1,12 @@
+{
+ "issue_id": 40164864,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Ill in v8::internal::Isolate::PushStackTraceAndDie",
+ "url": "https://issues.chromium.org/issues/40164864",
+ "testcase_ids": [
+  "5119163952857088"
+ ],
+ "downloaded": [
+  "5119163952857088"
+ ]
+}

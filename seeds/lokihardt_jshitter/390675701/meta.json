@@ -1,0 +1,12 @@
+{
+ "issue_id": 390675701,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in !MemoryChunk::FromHeapObject(it.first)->IsLargePage() implies !HeapLayout::InYou",
+ "url": "https://issues.chromium.org/issues/390675701",
+ "testcase_ids": [
+  "6198583032217600"
+ ],
+ "downloaded": [
+  "6198583032217600"
+ ]
+}

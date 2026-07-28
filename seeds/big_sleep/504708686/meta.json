@@ -1,0 +1,12 @@
+{
+ "issue_id": 504708686,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in v8_flags.flush_liftoff_code in wasm-engine.cc",
+ "url": "https://issues.chromium.org/issues/504708686",
+ "testcase_ids": [
+  "4767303740719104"
+ ],
+ "downloaded": [
+  "4767303740719104"
+ ]
+}

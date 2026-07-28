@@ -1,0 +1,12 @@
+{
+ "issue_id": 41429372,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Unknown signal in Builtins_ArgumentsAdaptorTrampoline",
+ "url": "https://issues.chromium.org/issues/41429372",
+ "testcase_ids": [
+  "6084490168107008"
+ ],
+ "downloaded": [
+  "6084490168107008"
+ ]
+}

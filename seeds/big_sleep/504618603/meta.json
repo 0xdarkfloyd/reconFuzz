@@ -1,0 +1,12 @@
+{
+ "issue_id": 504618603,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in sim-arm64-optional-features in assembler-arm64.cc",
+ "url": "https://issues.chromium.org/issues/504618603",
+ "testcase_ids": [
+  "4616314081542144"
+ ],
+ "downloaded": [
+  "4616314081542144"
+ ]
+}

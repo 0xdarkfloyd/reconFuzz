@@ -1,0 +1,12 @@
+{
+ "issue_id": 40050571,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Unknown signal in Builtins_CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit",
+ "url": "https://issues.chromium.org/issues/40050571",
+ "testcase_ids": [
+  "4815603657211904"
+ ],
+ "downloaded": [
+  "4815603657211904"
+ ]
+}

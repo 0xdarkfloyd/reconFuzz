@@ -1,0 +1,12 @@
+{
+ "issue_id": 40067480,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in is_activated_ || shared_heap_worklist_.has_value() in marking-barrier.cc",
+ "url": "https://issues.chromium.org/issues/40067480",
+ "testcase_ids": [
+  "4668054639935488"
+ ],
+ "downloaded": [
+  "4668054639935488"
+ ]
+}

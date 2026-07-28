@@ -1,0 +1,12 @@
+{
+ "issue_id": 503869555,
+ "fuzzer": "big_sleep",
+ "title": "Abrt in v8::base::FatalNoSecurityImpact",
+ "url": "https://issues.chromium.org/issues/503869555",
+ "testcase_ids": [
+  "6381134480965632"
+ ],
+ "downloaded": [
+  "6381134480965632"
+ ]
+}

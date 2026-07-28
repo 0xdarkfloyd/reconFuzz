@@ -1,0 +1,12 @@
+{
+ "issue_id": 356720579,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: IsUndefined(prototype_chain_enum_cache__value) || IsFixedArray(prototype_chain_e",
+ "url": "https://issues.chromium.org/issues/356720579",
+ "testcase_ids": [
+  "5068643702341632"
+ ],
+ "downloaded": [
+  "5068643702341632"
+ ]
+}

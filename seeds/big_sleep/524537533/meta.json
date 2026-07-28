@@ -1,0 +1,12 @@
+{
+ "issue_id": 524537533,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Command-line provided flag --enable-inspector is prohibited by --disallow-unsafe",
+ "url": "https://issues.chromium.org/issues/524537533",
+ "testcase_ids": [
+  "5630298884702208"
+ ],
+ "downloaded": [
+  "5630298884702208"
+ ]
+}

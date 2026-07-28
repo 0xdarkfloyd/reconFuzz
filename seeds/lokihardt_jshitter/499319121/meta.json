@@ -1,0 +1,12 @@
+{
+ "issue_id": 499319121,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Abrt with empty stacktrace",
+ "url": "https://issues.chromium.org/issues/499319121",
+ "testcase_ids": [
+  "5968170623991808"
+ ],
+ "downloaded": [
+  "5968170623991808"
+ ]
+}

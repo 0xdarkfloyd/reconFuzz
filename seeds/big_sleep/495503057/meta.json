@@ -1,0 +1,12 @@
+{
+ "issue_id": 495503057,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in !try_catch.HasCaught() in d8.cc",
+ "url": "https://issues.chromium.org/issues/495503057",
+ "testcase_ids": [
+  "6452336817897472"
+ ],
+ "downloaded": [
+  "6452336817897472"
+ ]
+}

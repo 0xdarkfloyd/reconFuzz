@@ -1,0 +1,12 @@
+{
+ "issue_id": 40762549,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Heap-buffer-overflow in v8::internal::Simulator::LoadStoreHelper",
+ "url": "https://issues.chromium.org/issues/40762549",
+ "testcase_ids": [
+  "6122309556174848"
+ ],
+ "downloaded": [
+  "6122309556174848"
+ ]
+}

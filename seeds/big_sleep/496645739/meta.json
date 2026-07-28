@@ -1,0 +1,12 @@
+{
+ "issue_id": 496645739,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: to->jmpbuf()->state == expected_target_state in isolate.cc",
+ "url": "https://issues.chromium.org/issues/496645739",
+ "testcase_ids": [
+  "6387165789454336"
+ ],
+ "downloaded": [
+  "6387165789454336"
+ ]
+}

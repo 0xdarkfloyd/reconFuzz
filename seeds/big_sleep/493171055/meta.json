@@ -1,0 +1,12 @@
+{
+ "issue_id": 493171055,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in IsPrimitiveMap(*this) || instance_type() == WASM_NULL_TYPE in map-inl.h",
+ "url": "https://issues.chromium.org/issues/493171055",
+ "testcase_ids": [
+  "4962870345269248"
+ ],
+ "downloaded": [
+  "4962870345269248"
+ ]
+}

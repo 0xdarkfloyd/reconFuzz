@@ -1,0 +1,12 @@
+{
+ "issue_id": 514930424,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Repeated specification of d8 flag --icu-locale in d8.h",
+ "url": "https://issues.chromium.org/issues/514930424",
+ "testcase_ids": [
+  "4735636460306432"
+ ],
+ "downloaded": [
+  "4735636460306432"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 40121744,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in !name_->AsIntegerIndex(&index) in lookup-inl.h",
+ "url": "https://issues.chromium.org/issues/40121744",
+ "testcase_ids": [
+  "4842891636703232"
+ ],
+ "downloaded": [
+  "4842891636703232"
+ ]
+}

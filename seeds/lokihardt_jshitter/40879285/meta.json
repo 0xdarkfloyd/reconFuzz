@@ -1,0 +1,12 @@
+{
+ "issue_id": 40879285,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in last_added_ == ADD_ATOM in regexp-parser.cc",
+ "url": "https://issues.chromium.org/issues/40879285",
+ "testcase_ids": [
+  "4791666901975040"
+ ],
+ "downloaded": [
+  "4791666901975040"
+ ]
+}

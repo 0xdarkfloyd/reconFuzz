@@ -1,0 +1,12 @@
+{
+ "issue_id": 498814570,
+ "fuzzer": "big_sleep",
+ "title": "Unreachable code in access-info.cc",
+ "url": "https://issues.chromium.org/issues/498814570",
+ "testcase_ids": [
+  "6125577585065984"
+ ],
+ "downloaded": [
+  "6125577585065984"
+ ]
+}

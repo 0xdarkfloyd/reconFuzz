@@ -1,0 +1,12 @@
+{
+ "issue_id": 40052532,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Bad-cast to v8::internal::compiler::Operator1<v8::internal::BinaryOperationHint, v8::internal::compiler::OpEqualTo<v8::internal::BinaryOperationHint>, v8::internal::compiler::OpHash<v8::internal::BinaryOperationHint>> from v8::internal::compiler::Operator1<v8::internal::compiler::FeedbackParameter, v8::internal::compiler::OpEqualTo<v8::internal::compiler::FeedbackParameter>, v8::internal::compiler::OpHash<v8::internal::compiler::FeedbackParameter> > in v8::internal::BinaryOperationHint const& v8::internal::compiler::OpParameter<v8:",
+ "url": "https://issues.chromium.org/issues/40052532",
+ "testcase_ids": [
+  "6503008147406848"
+ ],
+ "downloaded": [
+  "6503008147406848"
+ ]
+}

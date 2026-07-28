@@ -1,0 +1,12 @@
+{
+ "issue_id": 495503123,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in IsSmi(input_or_debug_pos()) in objects.cc",
+ "url": "https://issues.chromium.org/issues/495503123",
+ "testcase_ids": [
+  "4816849577476096"
+ ],
+ "downloaded": [
+  "4816849577476096"
+ ]
+}

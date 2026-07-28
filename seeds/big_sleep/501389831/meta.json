@@ -1,0 +1,12 @@
+{
+ "issue_id": 501389831,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: IsSmi(value) || IsTheHole(value, isolate) in objects-debug.cc",
+ "url": "https://issues.chromium.org/issues/501389831",
+ "testcase_ids": [
+  "6518117429706752"
+ ],
+ "downloaded": [
+  "6518117429706752"
+ ]
+}

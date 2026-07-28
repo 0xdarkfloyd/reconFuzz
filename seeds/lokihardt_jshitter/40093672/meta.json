@@ -1,0 +1,12 @@
+{
+ "issue_id": 40093672,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in !std::isnan(value) in js-operator.h",
+ "url": "https://issues.chromium.org/issues/40093672",
+ "testcase_ids": [
+  "6306889587228672"
+ ],
+ "downloaded": [
+  "6306889587228672"
+ ]
+}

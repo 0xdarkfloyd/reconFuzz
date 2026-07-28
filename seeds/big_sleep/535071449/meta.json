@@ -1,0 +1,12 @@
+{
+ "issue_id": 535071449,
+ "fuzzer": "big_sleep",
+ "title": "Abrt in v8::base::OS::SignalCodeMovingGC",
+ "url": "https://issues.chromium.org/issues/535071449",
+ "testcase_ids": [
+  "6228540408233984"
+ ],
+ "downloaded": [
+  "6228540408233984"
+ ]
+}

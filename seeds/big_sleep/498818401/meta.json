@@ -1,0 +1,12 @@
+{
+ "issue_id": 498818401,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in IsJSReceiver(*value) || IsNull(*value, isolate) in objects.cc",
+ "url": "https://issues.chromium.org/issues/498818401",
+ "testcase_ids": [
+  "6163740852518912"
+ ],
+ "downloaded": [
+  "6163740852518912"
+ ]
+}

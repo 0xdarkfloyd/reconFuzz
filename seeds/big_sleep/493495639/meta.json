@@ -1,0 +1,12 @@
+{
+ "issue_id": 493495639,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in U_SUCCESS(status) in intl-objects.h",
+ "url": "https://issues.chromium.org/issues/493495639",
+ "testcase_ids": [
+  "5612647424753664"
+ ],
+ "downloaded": [
+  "5612647424753664"
+ ]
+}

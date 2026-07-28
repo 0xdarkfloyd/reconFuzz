@@ -1,0 +1,12 @@
+{
+ "issue_id": 521921424,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Maybe value is Nothing",
+ "url": "https://issues.chromium.org/issues/521921424",
+ "testcase_ids": [
+  "4824811641536512"
+ ],
+ "downloaded": [
+  "4824811641536512"
+ ]
+}

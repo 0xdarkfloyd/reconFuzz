@@ -1,0 +1,12 @@
+{
+ "issue_id": 501185865,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in v8_flags.switch_table_min_cases > 0 in bytecode-generator.cc",
+ "url": "https://issues.chromium.org/issues/501185865",
+ "testcase_ids": [
+  "5009113620709376"
+ ],
+ "downloaded": [
+  "5009113620709376"
+ ]
+}

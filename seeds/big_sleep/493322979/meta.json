@@ -1,0 +1,12 @@
+{
+ "issue_id": 493322979,
+ "fuzzer": "big_sleep",
+ "title": "Unreachable code in wasm-external-refs.cc",
+ "url": "https://issues.chromium.org/issues/493322979",
+ "testcase_ids": [
+  "5059029764177920"
+ ],
+ "downloaded": [
+  "5059029764177920"
+ ]
+}

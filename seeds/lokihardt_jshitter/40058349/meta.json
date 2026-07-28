@@ -1,0 +1,12 @@
+{
+ "issue_id": 40058349,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: is_int24(imm24) in assembler-arm.cc",
+ "url": "https://issues.chromium.org/issues/40058349",
+ "testcase_ids": [
+  "5765772502433792"
+ ],
+ "downloaded": [
+  "5765772502433792"
+ ]
+}

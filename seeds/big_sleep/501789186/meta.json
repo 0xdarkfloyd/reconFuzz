@@ -1,0 +1,12 @@
+{
+ "issue_id": 501789186,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: !WriteBarrier::IsRequired(heap_object, Tagged<Object>(value)) in heap.cc",
+ "url": "https://issues.chromium.org/issues/501789186",
+ "testcase_ids": [
+  "6667179470651392"
+ ],
+ "downloaded": [
+  "6667179470651392"
+ ]
+}

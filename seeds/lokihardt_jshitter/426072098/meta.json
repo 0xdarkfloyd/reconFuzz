@@ -1,0 +1,12 @@
+{
+ "issue_id": 426072098,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "ASSERT: CSA_DCHECK failed: IsFixedArrayWithKindOrEmpty(elements, from_kind)",
+ "url": "https://issues.chromium.org/issues/426072098",
+ "testcase_ids": [
+  "5543789095485440"
+ ],
+ "downloaded": [
+  "5543789095485440"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 496499281,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in code->is_liftoff() in compilation-hints-generation.cc",
+ "url": "https://issues.chromium.org/issues/496499281",
+ "testcase_ids": [
+  "5286960792895488"
+ ],
+ "downloaded": [
+  "5286960792895488"
+ ]
+}

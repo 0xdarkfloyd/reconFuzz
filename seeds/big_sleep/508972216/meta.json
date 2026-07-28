@@ -1,0 +1,12 @@
+{
+ "issue_id": 508972216,
+ "fuzzer": "big_sleep",
+ "title": "Fix builtins that load Wasm instance data from parent (JS) frame in inlined Wasm-in-JS functions",
+ "url": "https://issues.chromium.org/issues/508972216",
+ "testcase_ids": [
+  "5516116692500480"
+ ],
+ "downloaded": [
+  "5516116692500480"
+ ]
+}

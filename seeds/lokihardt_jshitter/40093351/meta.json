@@ -1,0 +1,12 @@
+{
+ "issue_id": 40093351,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in index >= 0 && index < this->length() in fixed-array-inl.h",
+ "url": "https://issues.chromium.org/issues/40093351",
+ "testcase_ids": [
+  "5990606213742592"
+ ],
+ "downloaded": [
+  "5990606213742592"
+ ]
+}

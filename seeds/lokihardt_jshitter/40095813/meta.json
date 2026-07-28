@@ -1,0 +1,12 @@
+{
+ "issue_id": 40095813,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Unknown signal in Builtins_JSEntryTrampoline",
+ "url": "https://issues.chromium.org/issues/40095813",
+ "testcase_ids": [
+  "5735048987148288"
+ ],
+ "downloaded": [
+  "5735048987148288"
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "issue_id": 40062008,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Crash in Builtins_JSEntryTrampoline",
+ "url": "https://issues.chromium.org/issues/40062008",
+ "testcase_ids": [
+  "5282766594965504"
+ ],
+ "downloaded": []
+}

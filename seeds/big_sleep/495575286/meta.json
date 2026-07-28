@@ -1,0 +1,12 @@
+{
+ "issue_id": 495575286,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in IsJSReceiver(object) in objects-inl.h",
+ "url": "https://issues.chromium.org/issues/495575286",
+ "testcase_ids": [
+  "5240957867950080"
+ ],
+ "downloaded": [
+  "5240957867950080"
+ ]
+}

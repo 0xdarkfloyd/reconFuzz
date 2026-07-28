@@ -1,0 +1,12 @@
+{
+ "issue_id": 441360078,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: node->InputAt(0)->UseCount() == 1 in graph-builder.cc",
+ "url": "https://issues.chromium.org/issues/441360078",
+ "testcase_ids": [
+  "6414657816297472"
+ ],
+ "downloaded": [
+  "6414657816297472"
+ ]
+}

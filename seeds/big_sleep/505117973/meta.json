@@ -1,0 +1,12 @@
+{
+ "issue_id": 505117973,
+ "fuzzer": "big_sleep",
+ "title": "ASSERT: CSA_DCHECK failed: IsPageFlagSet(value, MemoryChunk::kInSharedHeap)",
+ "url": "https://issues.chromium.org/issues/505117973",
+ "testcase_ids": [
+  "5545024875954176"
+ ],
+ "downloaded": [
+  "5545024875954176"
+ ]
+}

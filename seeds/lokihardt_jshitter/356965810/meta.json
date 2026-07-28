@@ -1,0 +1,12 @@
+{
+ "issue_id": 356965810,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Undefined-shift in v8::internal::maglev::ReduceResult v8::internal::maglev::MaglevGraphBuilder::Try",
+ "url": "https://issues.chromium.org/issues/356965810",
+ "testcase_ids": [
+  "5785916331196416"
+ ],
+ "downloaded": [
+  "5785916331196416"
+ ]
+}

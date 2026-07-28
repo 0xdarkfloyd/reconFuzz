@@ -1,0 +1,12 @@
+{
+ "issue_id": 513282275,
+ "fuzzer": "big_sleep",
+ "title": "Null-dereference READ in v8::ScriptCompiler::ScriptStreamingTask::Run",
+ "url": "https://issues.chromium.org/issues/513282275",
+ "testcase_ids": [
+  "5425828510859264"
+ ],
+ "downloaded": [
+  "5425828510859264"
+ ]
+}

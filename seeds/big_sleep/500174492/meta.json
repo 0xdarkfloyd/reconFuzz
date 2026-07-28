@@ -1,0 +1,12 @@
+{
+ "issue_id": 500174492,
+ "fuzzer": "big_sleep",
+ "title": "Unreachable code in constant-expression-interface.cc",
+ "url": "https://issues.chromium.org/issues/500174492",
+ "testcase_ids": [
+  "6179221625929728"
+ ],
+ "downloaded": [
+  "6179221625929728"
+ ]
+}

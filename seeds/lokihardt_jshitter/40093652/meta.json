@@ -1,0 +1,12 @@
+{
+ "issue_id": 40093652,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: TypeError: node #169:DeadValue[kRepTagged](input @0 = CheckString:CheckString) t",
+ "url": "https://issues.chromium.org/issues/40093652",
+ "testcase_ids": [
+  "4841365024014336"
+ ],
+ "downloaded": [
+  "4841365024014336"
+ ]
+}

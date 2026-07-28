@@ -1,0 +1,12 @@
+{
+ "issue_id": 504722252,
+ "fuzzer": "big_sleep",
+ "title": "Null-dereference READ in Builtins_JSToWasmWrapperAsm",
+ "url": "https://issues.chromium.org/issues/504722252",
+ "testcase_ids": [
+  "5798401371308032"
+ ],
+ "downloaded": [
+  "5798401371308032"
+ ]
+}

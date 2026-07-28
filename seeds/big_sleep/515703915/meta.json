@@ -1,0 +1,12 @@
+{
+ "issue_id": 515703915,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Command-line provided flag --trace-enabled is prohibited by --disallow-unsafe-fl",
+ "url": "https://issues.chromium.org/issues/515703915",
+ "testcase_ids": [
+  "5063618768961536"
+ ],
+ "downloaded": [
+  "5063618768961536"
+ ]
+}

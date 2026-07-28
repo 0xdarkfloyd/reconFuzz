@@ -1,0 +1,12 @@
+{
+ "issue_id": 525234472,
+ "fuzzer": "big_sleep",
+ "title": "ASSERT: CSA_DCHECK failed: IsSymbol(value_heapobject)",
+ "url": "https://issues.chromium.org/issues/525234472",
+ "testcase_ids": [
+  "6585888809189376"
+ ],
+ "downloaded": [
+  "6585888809189376"
+ ]
+}

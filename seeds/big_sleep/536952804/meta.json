@@ -1,0 +1,10 @@
+{
+ "issue_id": 536952804,
+ "fuzzer": "big_sleep",
+ "title": "Abrt in v8::internal::wasm::WasmFullDecoder<v8::internal::wasm::Decoder::NoValidationTag",
+ "url": "https://issues.chromium.org/issues/536952804",
+ "testcase_ids": [
+  "5309455491170304"
+ ],
+ "downloaded": []
+}

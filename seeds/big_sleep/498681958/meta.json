@@ -1,0 +1,12 @@
+{
+ "issue_id": 498681958,
+ "fuzzer": "big_sleep",
+ "title": "V8 sandbox violation in v8::internal::wasm::WasmWrapperTSGraphBuilder<v8::internal::compiler::turboshaft",
+ "url": "https://issues.chromium.org/issues/498681958",
+ "testcase_ids": [
+  "6725322120658944"
+ ],
+ "downloaded": [
+  "6725322120658944"
+ ]
+}

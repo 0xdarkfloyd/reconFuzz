@@ -1,0 +1,12 @@
+{
+ "issue_id": 40052565,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in c0_ <= static_cast<uc32>(unibrow::Utf16::kMaxNonSurrogateCharCode) in scanner.h",
+ "url": "https://issues.chromium.org/issues/40052565",
+ "testcase_ids": [
+  "5069551118647296"
+ ],
+ "downloaded": [
+  "5069551118647296"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 498816449,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: !decode_result.failed() in wasm-serialization.cc",
+ "url": "https://issues.chromium.org/issues/498816449",
+ "testcase_ids": [
+  "6710444454608896"
+ ],
+ "downloaded": [
+  "6710444454608896"
+ ]
+}

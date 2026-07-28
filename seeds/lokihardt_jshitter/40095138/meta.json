@@ -1,0 +1,12 @@
+{
+ "issue_id": 40095138,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in object->HasSmiOrObjectElements() || object->HasDoubleElements() || object->HasFa",
+ "url": "https://issues.chromium.org/issues/40095138",
+ "testcase_ids": [
+  "6319876010016768"
+ ],
+ "downloaded": [
+  "6319876010016768"
+ ]
+}

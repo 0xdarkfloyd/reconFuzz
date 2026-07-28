@@ -1,0 +1,12 @@
+{
+ "issue_id": 515480467,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Missing deoptimization information for OptimizedJSFrame::Summarize in frames.cc",
+ "url": "https://issues.chromium.org/issues/515480467",
+ "testcase_ids": [
+  "6594108202188800"
+ ],
+ "downloaded": [
+  "6594108202188800"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 474646931,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Crash in Builtins_ArrayIteratorPrototypeNext",
+ "url": "https://issues.chromium.org/issues/474646931",
+ "testcase_ids": [
+  "4541947502854144"
+ ],
+ "downloaded": [
+  "4541947502854144"
+ ]
+}

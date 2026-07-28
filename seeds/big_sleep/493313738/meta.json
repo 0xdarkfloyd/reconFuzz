@@ -1,0 +1,12 @@
+{
+ "issue_id": 493313738,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: static_cast<uint32_t>(index) <= static_cast<uint32_t>(length_) in arguments.h",
+ "url": "https://issues.chromium.org/issues/493313738",
+ "testcase_ids": [
+  "5749469781884928"
+ ],
+ "downloaded": [
+  "5749469781884928"
+ ]
+}

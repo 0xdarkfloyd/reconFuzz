@@ -1,0 +1,12 @@
+{
+ "issue_id": 493432198,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: (perf_output_handle_) != nullptr in log.cc",
+ "url": "https://issues.chromium.org/issues/493432198",
+ "testcase_ids": [
+  "6689970043420672"
+ ],
+ "downloaded": [
+  "6689970043420672"
+ ]
+}

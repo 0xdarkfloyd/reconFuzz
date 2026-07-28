@@ -1,0 +1,12 @@
+{
+ "issue_id": 500171779,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in !frozen in liftoff-assembler.h",
+ "url": "https://issues.chromium.org/issues/500171779",
+ "testcase_ids": [
+  "6737017517932544"
+ ],
+ "downloaded": [
+  "6737017517932544"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 499949399,
+ "fuzzer": "big_sleep",
+ "title": "V8 sandbox violation in v8::internal::compiler::turboshaft::OpIndex v8::internal::compiler::turboshaft::",
+ "url": "https://issues.chromium.org/issues/499949399",
+ "testcase_ids": [
+  "5862710252175360"
+ ],
+ "downloaded": [
+  "5862710252175360"
+ ]
+}

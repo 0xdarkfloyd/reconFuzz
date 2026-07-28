@@ -1,0 +1,12 @@
+{
+ "issue_id": 493319628,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in pos <= num_declared_functions in wasm-module.h",
+ "url": "https://issues.chromium.org/issues/493319628",
+ "testcase_ids": [
+  "5327549441802240"
+ ],
+ "downloaded": [
+  "5327549441802240"
+ ]
+}

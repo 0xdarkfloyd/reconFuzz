@@ -1,0 +1,12 @@
+{
+ "issue_id": 516488654,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Repeated specification of d8 flag --icu-data-file in d8.h",
+ "url": "https://issues.chromium.org/issues/516488654",
+ "testcase_ids": [
+  "5260415898517504"
+ ],
+ "downloaded": [
+  "5260415898517504"
+ ]
+}

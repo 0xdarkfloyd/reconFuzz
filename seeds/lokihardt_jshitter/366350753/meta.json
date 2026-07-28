@@ -1,0 +1,12 @@
+{
+ "issue_id": 366350753,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in !done() in source-position-table.h",
+ "url": "https://issues.chromium.org/issues/366350753",
+ "testcase_ids": [
+  "6585436155609088"
+ ],
+ "downloaded": [
+  "6585436155609088"
+ ]
+}

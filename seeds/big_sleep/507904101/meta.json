@@ -1,0 +1,12 @@
+{
+ "issue_id": 507904101,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Repeated specification of d8 flag --lcov in d8.h",
+ "url": "https://issues.chromium.org/issues/507904101",
+ "testcase_ids": [
+  "5894987183063040"
+ ],
+ "downloaded": [
+  "5894987183063040"
+ ]
+}

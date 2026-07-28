@@ -1,0 +1,12 @@
+{
+ "issue_id": 503872380,
+ "fuzzer": "big_sleep",
+ "title": "Abrt in v8::internal::wasm::IsSubtypeOfImpl",
+ "url": "https://issues.chromium.org/issues/503872380",
+ "testcase_ids": [
+  "4585033918611456"
+ ],
+ "downloaded": [
+  "4585033918611456"
+ ]
+}

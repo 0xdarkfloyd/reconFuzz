@@ -1,0 +1,12 @@
+{
+ "issue_id": 40055803,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: storage_.is_populated_",
+ "url": "https://issues.chromium.org/issues/40055803",
+ "testcase_ids": [
+  "5475015211155456"
+ ],
+ "downloaded": [
+  "5475015211155456"
+ ]
+}

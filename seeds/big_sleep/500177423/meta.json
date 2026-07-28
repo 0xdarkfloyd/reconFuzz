@@ -1,0 +1,12 @@
+{
+ "issue_id": 500177423,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: Dispatch counters require building with v8_enable_ignition_dispatch_counting in ",
+ "url": "https://issues.chromium.org/issues/500177423",
+ "testcase_ids": [
+  "6466056721825792"
+ ],
+ "downloaded": [
+  "6466056721825792"
+ ]
+}

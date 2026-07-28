@@ -1,0 +1,12 @@
+{
+ "issue_id": 488129645,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: ApplyEphemeronSemantics(key, value) != EphemeronResult::kMarkedValue in mark-com",
+ "url": "https://issues.chromium.org/issues/488129645",
+ "testcase_ids": [
+  "4668217603588096"
+ ],
+ "downloaded": [
+  "4668217603588096"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 40060999,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: next_index().Number() >= 0 in objects-debug.cc",
+ "url": "https://issues.chromium.org/issues/40060999",
+ "testcase_ids": [
+  "5223947740315648"
+ ],
+ "downloaded": [
+  "5223947740315648"
+ ]
+}

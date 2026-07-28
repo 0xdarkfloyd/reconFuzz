@@ -1,0 +1,12 @@
+{
+ "issue_id": 493314948,
+ "fuzzer": "big_sleep",
+ "title": "Crash with empty stacktrace",
+ "url": "https://issues.chromium.org/issues/493314948",
+ "testcase_ids": [
+  "4838245493833728"
+ ],
+ "downloaded": [
+  "4838245493833728"
+ ]
+}

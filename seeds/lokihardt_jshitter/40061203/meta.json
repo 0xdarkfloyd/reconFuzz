@@ -1,0 +1,12 @@
+{
+ "issue_id": 40061203,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Null-dereference READ in v8::internal::maglev::NodeBase::id",
+ "url": "https://issues.chromium.org/issues/40061203",
+ "testcase_ids": [
+  "5109427462144000"
+ ],
+ "downloaded": [
+  "5109427462144000"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 509622534,
+ "fuzzer": "big_sleep",
+ "title": "Abrt in v8::internal::FlagError::~FlagError",
+ "url": "https://issues.chromium.org/issues/509622534",
+ "testcase_ids": [
+  "5964076429639680"
+ ],
+ "downloaded": [
+  "5964076429639680"
+ ]
+}

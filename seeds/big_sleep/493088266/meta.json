@@ -1,0 +1,12 @@
+{
+ "issue_id": 493088266,
+ "fuzzer": "big_sleep",
+ "title": "Unreachable code in js-objects.cc",
+ "url": "https://issues.chromium.org/issues/493088266",
+ "testcase_ids": [
+  "4844955306491904"
+ ],
+ "downloaded": [
+  "4844955306491904"
+ ]
+}

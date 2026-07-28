@@ -1,0 +1,12 @@
+{
+ "issue_id": 503466209,
+ "fuzzer": "big_sleep",
+ "title": "Unreachable code in wrappers-inl.h (experimental Wasm type reflection / WebAssembly.Function)",
+ "url": "https://issues.chromium.org/issues/503466209",
+ "testcase_ids": [
+  "4631025233723392"
+ ],
+ "downloaded": [
+  "4631025233723392"
+ ]
+}

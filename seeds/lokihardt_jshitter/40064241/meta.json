@@ -1,0 +1,12 @@
+{
+ "issue_id": 40064241,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: !v8::internal::v8_flags.enable_slow_asserts.value() || (IsJSObject_NonInline(*th",
+ "url": "https://issues.chromium.org/issues/40064241",
+ "testcase_ids": [
+  "4670227332399104"
+ ],
+ "downloaded": [
+  "4670227332399104"
+ ]
+}

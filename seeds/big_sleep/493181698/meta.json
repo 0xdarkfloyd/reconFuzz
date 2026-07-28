@@ -1,0 +1,12 @@
+{
+ "issue_id": 493181698,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: v8_flags.turbolev in wasm-in-js-inlining-reducer-inl.h",
+ "url": "https://issues.chromium.org/issues/493181698",
+ "testcase_ids": [
+  "5191476606599168"
+ ],
+ "downloaded": [
+  "5191476606599168"
+ ]
+}

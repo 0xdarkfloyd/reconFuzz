@@ -1,0 +1,12 @@
+{
+ "issue_id": 506504895,
+ "fuzzer": "big_sleep",
+ "title": "Abrt in v8::internal::Runtime_Abort",
+ "url": "https://issues.chromium.org/issues/506504895",
+ "testcase_ids": [
+  "6345687042129920"
+ ],
+ "downloaded": [
+  "6345687042129920"
+ ]
+}

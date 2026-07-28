@@ -1,0 +1,12 @@
+{
+ "issue_id": 40104997,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "ASSERT: CSA_ASSERT failed: Torque assert 'valueDouble <= kMaxUInt32Double' failed",
+ "url": "https://issues.chromium.org/issues/40104997",
+ "testcase_ids": [
+  "5729933760266240"
+ ],
+ "downloaded": [
+  "5729933760266240"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 40050461,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Use-of-uninitialized-value in v8::internal::Scope::Scope",
+ "url": "https://issues.chromium.org/issues/40050461",
+ "testcase_ids": [
+  "4847461874925568"
+ ],
+ "downloaded": [
+  "4847461874925568"
+ ]
+}

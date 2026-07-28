@@ -1,0 +1,12 @@
+{
+ "issue_id": 516834397,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in wasm::GenerateRandomWasmModule produced a module which did not compile: WasmGene",
+ "url": "https://issues.chromium.org/issues/516834397",
+ "testcase_ids": [
+  "5051409552670720"
+ ],
+ "downloaded": [
+  "5051409552670720"
+ ]
+}

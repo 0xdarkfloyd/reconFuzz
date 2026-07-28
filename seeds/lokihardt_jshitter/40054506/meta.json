@@ -1,0 +1,12 @@
+{
+ "issue_id": 40054506,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: !v8::internal::FLAG_enable_slow_asserts || (IsJSReceiver()) in js-objects-inl.h",
+ "url": "https://issues.chromium.org/issues/40054506",
+ "testcase_ids": [
+  "6290863075688448"
+ ],
+ "downloaded": [
+  "6290863075688448"
+ ]
+}

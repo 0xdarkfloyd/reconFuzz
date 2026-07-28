@@ -1,0 +1,12 @@
+{
+ "issue_id": 503873148,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Flag --expose-fast-api is incompatible with --stress-snapshot in d8.cc",
+ "url": "https://issues.chromium.org/issues/503873148",
+ "testcase_ids": [
+  "6662609457676288"
+ ],
+ "downloaded": [
+  "6662609457676288"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 382988742,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Null-dereference READ in v8::base::Flags<v8::internal::MemoryChunk::Flag, unsigned int, unsigned int>::op",
+ "url": "https://issues.chromium.org/issues/382988742",
+ "testcase_ids": [
+  "6006448324542464"
+ ],
+ "downloaded": [
+  "6006448324542464"
+ ]
+}

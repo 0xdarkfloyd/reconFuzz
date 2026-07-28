@@ -1,0 +1,12 @@
+{
+ "issue_id": 40614447,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Null-dereference READ in v8::internal::DeclarationScope::HoistSloppyBlockFunctions",
+ "url": "https://issues.chromium.org/issues/40614447",
+ "testcase_ids": [
+  "6280577705705472"
+ ],
+ "downloaded": [
+  "6280577705705472"
+ ]
+}

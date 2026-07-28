@@ -1,0 +1,12 @@
+{
+ "issue_id": 499817895,
+ "fuzzer": "big_sleep",
+ "title": "ASSERT: CSA_DCHECK failed: Torque assert 'Is<TheHole>(val) || !Is<ContextCell>(val)' fai",
+ "url": "https://issues.chromium.org/issues/499817895",
+ "testcase_ids": [
+  "6253263305342976"
+ ],
+ "downloaded": [
+  "6253263305342976"
+ ]
+}

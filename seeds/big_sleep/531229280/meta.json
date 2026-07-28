@@ -1,0 +1,12 @@
+{
+ "issue_id": 531229280,
+ "fuzzer": "big_sleep",
+ "title": "Unreachable code in simulator-arm64.cc",
+ "url": "https://issues.chromium.org/issues/531229280",
+ "testcase_ids": [
+  "5237329232953344"
+ ],
+ "downloaded": [
+  "5237329232953344"
+ ]
+}

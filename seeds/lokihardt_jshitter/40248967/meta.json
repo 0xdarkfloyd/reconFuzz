@@ -1,0 +1,12 @@
+{
+ "issue_id": 40248967,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Trap in v8::FuzzerMonitor::SimulateErrors",
+ "url": "https://issues.chromium.org/issues/40248967",
+ "testcase_ids": [
+  "6129473075478528"
+ ],
+ "downloaded": [
+  "6129473075478528"
+ ]
+}

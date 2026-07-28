@@ -1,0 +1,12 @@
+{
+ "issue_id": 40095259,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Unknown signal in Builtins_RegExpMatchFast",
+ "url": "https://issues.chromium.org/issues/40095259",
+ "testcase_ids": [
+  "5152014075559936"
+ ],
+ "downloaded": [
+  "5152014075559936"
+ ]
+}

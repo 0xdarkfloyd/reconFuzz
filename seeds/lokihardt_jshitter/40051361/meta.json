@@ -1,0 +1,12 @@
+{
+ "issue_id": 40051361,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Use-of-uninitialized-value in v8::internal::JSFunction::ToString",
+ "url": "https://issues.chromium.org/issues/40051361",
+ "testcase_ids": [
+  "5715051983994880"
+ ],
+ "downloaded": [
+  "5715051983994880"
+ ]
+}

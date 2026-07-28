@@ -1,0 +1,12 @@
+{
+ "issue_id": 40095451,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Crash in ReadUnalignedValue<double>",
+ "url": "https://issues.chromium.org/issues/40095451",
+ "testcase_ids": [
+  "5750776617631744"
+ ],
+ "downloaded": [
+  "5750776617631744"
+ ]
+}

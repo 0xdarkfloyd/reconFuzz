@@ -1,0 +1,12 @@
+{
+ "issue_id": 504618611,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in base::bits::RoundUpToPowerOfTwo64(max_index) == kMaxMemory64Size in liftoff-asse",
+ "url": "https://issues.chromium.org/issues/504618611",
+ "testcase_ids": [
+  "5867976687386624"
+ ],
+ "downloaded": [
+  "5867976687386624"
+ ]
+}

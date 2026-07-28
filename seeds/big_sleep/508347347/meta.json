@@ -1,0 +1,12 @@
+{
+ "issue_id": 508347347,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Only one -C option is allowed in d8.cc",
+ "url": "https://issues.chromium.org/issues/508347347",
+ "testcase_ids": [
+  "5910092398493696"
+ ],
+ "downloaded": [
+  "5910092398493696"
+ ]
+}

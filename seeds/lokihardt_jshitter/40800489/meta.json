@@ -1,0 +1,12 @@
+{
+ "issue_id": 40800489,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in r.from() != kMaxUInt16 in regexp-macro-assembler.cc",
+ "url": "https://issues.chromium.org/issues/40800489",
+ "testcase_ids": [
+  "5729281030029312"
+ ],
+ "downloaded": [
+  "5729281030029312"
+ ]
+}

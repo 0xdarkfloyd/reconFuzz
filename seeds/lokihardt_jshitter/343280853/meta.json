@@ -1,0 +1,10 @@
+{
+ "issue_id": 343280853,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Stack-overflow in Builtins_InterpreterEntryTrampoline",
+ "url": "https://issues.chromium.org/issues/343280853",
+ "testcase_ids": [
+  "5751555167813632"
+ ],
+ "downloaded": []
+}

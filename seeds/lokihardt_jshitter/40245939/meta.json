@@ -1,0 +1,12 @@
+{
+ "issue_id": 40245939,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Lock-order-inversion in pthread_mutex_lock",
+ "url": "https://issues.chromium.org/issues/40245939",
+ "testcase_ids": [
+  "4839007424020480"
+ ],
+ "downloaded": [
+  "4839007424020480"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 504030766,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in !IsAnyHole(*value) in objects.cc",
+ "url": "https://issues.chromium.org/issues/504030766",
+ "testcase_ids": [
+  "5863920157884416"
+ ],
+ "downloaded": [
+  "5863920157884416"
+ ]
+}

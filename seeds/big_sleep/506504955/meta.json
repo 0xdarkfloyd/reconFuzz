@@ -1,0 +1,12 @@
+{
+ "issue_id": 506504955,
+ "fuzzer": "big_sleep",
+ "title": "Unreachable code in turbofan-types.cc",
+ "url": "https://issues.chromium.org/issues/506504955",
+ "testcase_ids": [
+  "4562624842858496"
+ ],
+ "downloaded": [
+  "4562624842858496"
+ ]
+}

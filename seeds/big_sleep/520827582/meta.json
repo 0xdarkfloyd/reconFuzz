@@ -1,0 +1,12 @@
+{
+ "issue_id": 520827582,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in ACCESS BELOW STACK POINTER in simulator-arm64.cc",
+ "url": "https://issues.chromium.org/issues/520827582",
+ "testcase_ids": [
+  "5319944782774272"
+ ],
+ "downloaded": [
+  "5319944782774272"
+ ]
+}

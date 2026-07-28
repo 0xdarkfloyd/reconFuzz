@@ -1,0 +1,12 @@
+{
+ "issue_id": 40600859,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Ill in __RT_impl_Runtime_OptimizeFunctionOnNextCall",
+ "url": "https://issues.chromium.org/issues/40600859",
+ "testcase_ids": [
+  "4843422656233472"
+ ],
+ "downloaded": [
+  "4843422656233472"
+ ]
+}

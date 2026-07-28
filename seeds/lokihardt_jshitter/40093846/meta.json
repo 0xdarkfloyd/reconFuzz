@@ -1,0 +1,12 @@
+{
+ "issue_id": 40093846,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: size <= kMaxRegularHeapObjectSize in runtime-internal.cc",
+ "url": "https://issues.chromium.org/issues/40093846",
+ "testcase_ids": [
+  "4890320638705664"
+ ],
+ "downloaded": [
+  "4890320638705664"
+ ]
+}

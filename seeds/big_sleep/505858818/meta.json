@@ -1,0 +1,12 @@
+{
+ "issue_id": 505858818,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in --liftoff-only: treating bailout as fatal error. Cause: testing opcode in liftof",
+ "url": "https://issues.chromium.org/issues/505858818",
+ "testcase_ids": [
+  "4900493763575808"
+ ],
+ "downloaded": [
+  "4900493763575808"
+ ]
+}

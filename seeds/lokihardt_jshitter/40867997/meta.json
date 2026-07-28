@@ -1,0 +1,12 @@
+{
+ "issue_id": 40867997,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Stack-buffer-overflow in v8::internal::maglev::NodeBase::id",
+ "url": "https://issues.chromium.org/issues/40867997",
+ "testcase_ids": [
+  "4798055687847936"
+ ],
+ "downloaded": [
+  "4798055687847936"
+ ]
+}

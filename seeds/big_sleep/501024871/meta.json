@@ -1,0 +1,12 @@
+{
+ "issue_id": 501024871,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: chunk & ADDRESS == 0 in runtime-test.cc",
+ "url": "https://issues.chromium.org/issues/501024871",
+ "testcase_ids": [
+  "5086165434662912"
+ ],
+ "downloaded": [
+  "5086165434662912"
+ ]
+}

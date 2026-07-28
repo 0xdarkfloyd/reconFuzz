@@ -1,0 +1,12 @@
+{
+ "issue_id": 498814936,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in v8_flags.harmony_struct in runtime-wasm.cc",
+ "url": "https://issues.chromium.org/issues/498814936",
+ "testcase_ids": [
+  "4660313085476864"
+ ],
+ "downloaded": [
+  "4660313085476864"
+ ]
+}

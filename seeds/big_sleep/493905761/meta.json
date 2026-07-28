@@ -1,0 +1,12 @@
+{
+ "issue_id": 493905761,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: IsUndefined(memory_object->array_buffer(), isolate) in wasm-objects.cc",
+ "url": "https://issues.chromium.org/issues/493905761",
+ "testcase_ids": [
+  "4997370609696768"
+ ],
+ "downloaded": [
+  "4997370609696768"
+ ]
+}

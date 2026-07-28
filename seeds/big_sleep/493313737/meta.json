@@ -1,0 +1,12 @@
+{
+ "issue_id": 493313737,
+ "fuzzer": "big_sleep",
+ "title": "Unreachable code in module-instantiate.cc",
+ "url": "https://issues.chromium.org/issues/493313737",
+ "testcase_ids": [
+  "5609024418512896"
+ ],
+ "downloaded": [
+  "5609024418512896"
+ ]
+}

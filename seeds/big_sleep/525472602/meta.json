@@ -1,0 +1,12 @@
+{
+ "issue_id": 525472602,
+ "fuzzer": "big_sleep",
+ "title": "ASSERT: CSA_DCHECK failed: Torque assert 'len <= Convert<uintptr>(kMaxFastArrayLength)' ",
+ "url": "https://issues.chromium.org/issues/525472602",
+ "testcase_ids": [
+  "5444111037399040"
+ ],
+ "downloaded": [
+  "5444111037399040"
+ ]
+}

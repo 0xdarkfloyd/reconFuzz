@@ -1,0 +1,12 @@
+{
+ "issue_id": 493181699,
+ "fuzzer": "big_sleep",
+ "title": "Unreachable code in struct-types.h (shared custom descriptors are not implemented)",
+ "url": "https://issues.chromium.org/issues/493181699",
+ "testcase_ids": [
+  "4796614493274112"
+ ],
+ "downloaded": [
+  "4796614493274112"
+ ]
+}

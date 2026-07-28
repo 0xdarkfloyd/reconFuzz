@@ -1,0 +1,12 @@
+{
+ "issue_id": 498818400,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: !is_null() in maybe-handles.h",
+ "url": "https://issues.chromium.org/issues/498818400",
+ "testcase_ids": [
+  "6071186756763648"
+ ],
+ "downloaded": [
+  "6071186756763648"
+ ]
+}

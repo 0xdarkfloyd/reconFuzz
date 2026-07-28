@@ -1,0 +1,12 @@
+{
+ "issue_id": 503869330,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Exported WebAssembly functions are not supported in snapshots in snapshot.cc",
+ "url": "https://issues.chromium.org/issues/503869330",
+ "testcase_ids": [
+  "5289370101776384"
+ ],
+ "downloaded": [
+  "5289370101776384"
+ ]
+}

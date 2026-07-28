@@ -1,0 +1,12 @@
+{
+ "issue_id": 495818765,
+ "fuzzer": "big_sleep",
+ "title": "DCHECK failure in v8_flags.abort_on_contradictory_flags in flags.cc",
+ "url": "https://issues.chromium.org/issues/495818765",
+ "testcase_ids": [
+  "4804746762289152"
+ ],
+ "downloaded": [
+  "4804746762289152"
+ ]
+}

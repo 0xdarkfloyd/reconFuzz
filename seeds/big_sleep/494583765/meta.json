@@ -1,0 +1,12 @@
+{
+ "issue_id": 494583765,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: ++active_safepoint_scopes_ == 1 in safepoint.cc",
+ "url": "https://issues.chromium.org/issues/494583765",
+ "testcase_ids": [
+  "5623795079479296"
+ ],
+ "downloaded": [
+  "5623795079479296"
+ ]
+}

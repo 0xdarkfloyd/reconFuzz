@@ -1,0 +1,12 @@
+{
+ "issue_id": 40095256,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: (location_) != nullptr in maybe-handles.h",
+ "url": "https://issues.chromium.org/issues/40095256",
+ "testcase_ids": [
+  "5739229554016256"
+ ],
+ "downloaded": [
+  "5739229554016256"
+ ]
+}

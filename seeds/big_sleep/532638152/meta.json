@@ -1,0 +1,12 @@
+{
+ "issue_id": 532638152,
+ "fuzzer": "big_sleep",
+ "title": "Abrt in v8::internal::ConcurrentMarking::JobTaskMajor::Run",
+ "url": "https://issues.chromium.org/issues/532638152",
+ "testcase_ids": [
+  "4890117902729216"
+ ],
+ "downloaded": [
+  "4890117902729216"
+ ]
+}

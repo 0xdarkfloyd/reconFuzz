@@ -1,0 +1,12 @@
+{
+ "issue_id": 444564250,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Crash in v8::internal::CallPrinter::Find",
+ "url": "https://issues.chromium.org/issues/444564250",
+ "testcase_ids": [
+  "4727628518850560"
+ ],
+ "downloaded": [
+  "4727628518850560"
+ ]
+}

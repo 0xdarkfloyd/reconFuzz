@@ -1,0 +1,12 @@
+{
+ "issue_id": 40062016,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: shared(isolate).IsSharedFunctionInfo()",
+ "url": "https://issues.chromium.org/issues/40062016",
+ "testcase_ids": [
+  "5909179303919616"
+ ],
+ "downloaded": [
+  "5909179303919616"
+ ]
+}

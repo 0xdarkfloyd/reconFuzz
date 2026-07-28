@@ -1,0 +1,12 @@
+{
+ "issue_id": 503097371,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: base::IsInRange(cp_offset, kMinCPOffset, kMaxCPOffset) in regexp-bytecode-genera",
+ "url": "https://issues.chromium.org/issues/503097371",
+ "testcase_ids": [
+  "5655757051691008"
+ ],
+ "downloaded": [
+  "5655757051691008"
+ ]
+}

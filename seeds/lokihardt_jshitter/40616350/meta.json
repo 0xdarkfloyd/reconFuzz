@@ -1,0 +1,12 @@
+{
+ "issue_id": 40616350,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Undefined-shift in RotateRight32",
+ "url": "https://issues.chromium.org/issues/40616350",
+ "testcase_ids": [
+  "6200265758867456"
+ ],
+ "downloaded": [
+  "6200265758867456"
+ ]
+}

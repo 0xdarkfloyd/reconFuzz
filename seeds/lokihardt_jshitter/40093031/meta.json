@@ -1,0 +1,12 @@
+{
+ "issue_id": 40093031,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Ill in v8::internal::interpreter::BytecodeArrayBuilder::Local",
+ "url": "https://issues.chromium.org/issues/40093031",
+ "testcase_ids": [
+  "6510837914927104"
+ ],
+ "downloaded": [
+  "6510837914927104"
+ ]
+}

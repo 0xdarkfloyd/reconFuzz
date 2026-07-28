@@ -1,0 +1,12 @@
+{
+ "issue_id": 493176399,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: instance_type() == other->instance_type() in map.cc",
+ "url": "https://issues.chromium.org/issues/493176399",
+ "testcase_ids": [
+  "4527788614680576"
+ ],
+ "downloaded": [
+  "4527788614680576"
+ ]
+}

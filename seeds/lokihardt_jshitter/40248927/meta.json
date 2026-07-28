@@ -1,0 +1,12 @@
+{
+ "issue_id": 40248927,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Fatal error in Fake error in d8.cc",
+ "url": "https://issues.chromium.org/issues/40248927",
+ "testcase_ids": [
+  "4663078882050048"
+ ],
+ "downloaded": [
+  "4663078882050048"
+ ]
+}

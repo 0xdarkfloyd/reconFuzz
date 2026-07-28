@@ -1,0 +1,12 @@
+{
+ "issue_id": 40242767,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Stack-overflow in v8::internal::ParserBase<v8::internal::PreParser>::ParseClassLiteral",
+ "url": "https://issues.chromium.org/issues/40242767",
+ "testcase_ids": [
+  "4999280059416576"
+ ],
+ "downloaded": [
+  "4999280059416576"
+ ]
+}

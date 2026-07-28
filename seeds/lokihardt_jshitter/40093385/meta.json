@@ -1,0 +1,12 @@
+{
+ "issue_id": 40093385,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: is_uint24(link) in assembler-arm.cc",
+ "url": "https://issues.chromium.org/issues/40093385",
+ "testcase_ids": [
+  "6739970322333696"
+ ],
+ "downloaded": [
+  "6739970322333696"
+ ]
+}

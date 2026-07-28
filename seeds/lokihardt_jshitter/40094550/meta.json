@@ -1,0 +1,12 @@
+{
+ "issue_id": 40094550,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Crash in v8::internal::Simulator::LoadStorePairHelper",
+ "url": "https://issues.chromium.org/issues/40094550",
+ "testcase_ids": [
+  "5937042613731328"
+ ],
+ "downloaded": [
+  "5937042613731328"
+ ]
+}

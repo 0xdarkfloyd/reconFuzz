@@ -1,0 +1,12 @@
+{
+ "issue_id": 342294275,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: !IsAnyHole(raw_cell->value(), isolate)",
+ "url": "https://issues.chromium.org/issues/342294275",
+ "testcase_ids": [
+  "5241278064164864"
+ ],
+ "downloaded": [
+  "5241278064164864"
+ ]
+}

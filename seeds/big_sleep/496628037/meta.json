@@ -1,0 +1,12 @@
+{
+ "issue_id": 496628037,
+ "fuzzer": "big_sleep",
+ "title": "Unreachable code in wasm-objects.cc",
+ "url": "https://issues.chromium.org/issues/496628037",
+ "testcase_ids": [
+  "5108241902108672"
+ ],
+ "downloaded": [
+  "5108241902108672"
+ ]
+}

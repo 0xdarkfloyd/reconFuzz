@@ -1,0 +1,12 @@
+{
+ "issue_id": 513617737,
+ "fuzzer": "big_sleep",
+ "title": "Null-dereference READ in v8::internal::JSFunction::JSFunctionVerify",
+ "url": "https://issues.chromium.org/issues/513617737",
+ "testcase_ids": [
+  "6351857081417728"
+ ],
+ "downloaded": [
+  "6351857081417728"
+ ]
+}

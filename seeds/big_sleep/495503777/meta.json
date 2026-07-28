@@ -1,0 +1,12 @@
+{
+ "issue_id": 495503777,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: IsSmi(args[i]) in runtime-test.cc",
+ "url": "https://issues.chromium.org/issues/495503777",
+ "testcase_ids": [
+  "5109713465180160"
+ ],
+ "downloaded": [
+  "5109713465180160"
+ ]
+}

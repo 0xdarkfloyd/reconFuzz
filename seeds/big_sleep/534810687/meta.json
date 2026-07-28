@@ -1,0 +1,12 @@
+{
+ "issue_id": 534810687,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Maglev verification: input 1 (a Int32ToNumber) of a Phi does not dominate its pr",
+ "url": "https://issues.chromium.org/issues/534810687",
+ "testcase_ids": [
+  "5130496686194688"
+ ],
+ "downloaded": [
+  "5130496686194688"
+ ]
+}

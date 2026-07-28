@@ -1,0 +1,12 @@
+{
+ "issue_id": 444265892,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in !IsAnyHole(key) in scavenger.cc",
+ "url": "https://issues.chromium.org/issues/444265892",
+ "testcase_ids": [
+  "6191467961712640"
+ ],
+ "downloaded": [
+  "6191467961712640"
+ ]
+}

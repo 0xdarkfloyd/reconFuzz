@@ -1,0 +1,12 @@
+{
+ "issue_id": 446239322,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Crash with empty stacktrace",
+ "url": "https://issues.chromium.org/issues/446239322",
+ "testcase_ids": [
+  "6612206078590976"
+ ],
+ "downloaded": [
+  "6612206078590976"
+ ]
+}

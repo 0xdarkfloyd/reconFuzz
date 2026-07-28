@@ -1,0 +1,12 @@
+{
+ "issue_id": 40254188,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: is_int19(imm19)",
+ "url": "https://issues.chromium.org/issues/40254188",
+ "testcase_ids": [
+  "6683454799544320"
+ ],
+ "downloaded": [
+  "6683454799544320"
+ ]
+}

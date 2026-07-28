@@ -1,0 +1,12 @@
+{
+ "issue_id": 500181839,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: chunk->InReadOnlySpace() || chunk->InWritableSharedSpace() in heap-verifier.cc",
+ "url": "https://issues.chromium.org/issues/500181839",
+ "testcase_ids": [
+  "5396040983281664"
+ ],
+ "downloaded": [
+  "5396040983281664"
+ ]
+}

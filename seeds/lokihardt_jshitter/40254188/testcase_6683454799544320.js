@@ -1,0 +1,4 @@
+E().next();
+async function* E() {
+    yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* yield* E();
+}

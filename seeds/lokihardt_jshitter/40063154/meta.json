@@ -1,0 +1,12 @@
+{
+ "issue_id": 40063154,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in ValidOpInputRep(graph, left(), input_rep) in operations.h",
+ "url": "https://issues.chromium.org/issues/40063154",
+ "testcase_ids": [
+  "6240931396386816"
+ ],
+ "downloaded": [
+  "6240931396386816"
+ ]
+}

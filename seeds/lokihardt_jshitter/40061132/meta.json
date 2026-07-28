@@ -1,0 +1,12 @@
+{
+ "issue_id": 40061132,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in offsets.size() != 0 in maglev-graph-builder.cc",
+ "url": "https://issues.chromium.org/issues/40061132",
+ "testcase_ids": [
+  "4873871700459520"
+ ],
+ "downloaded": [
+  "4873871700459520"
+ ]
+}

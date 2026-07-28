@@ -1,0 +1,12 @@
+{
+ "issue_id": 40093514,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in HasSimpleParameters() || is_block_scope() || is_being_lazily_parsed_ in scopes.c",
+ "url": "https://issues.chromium.org/issues/40093514",
+ "testcase_ids": [
+  "4850895428517888"
+ ],
+ "downloaded": [
+  "4850895428517888"
+ ]
+}

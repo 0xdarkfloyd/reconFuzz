@@ -1,0 +1,12 @@
+{
+ "issue_id": 499862965,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: inputs.size() <= std::numeric_limits<decltype(PhiOp::input_count)>::max() in ope",
+ "url": "https://issues.chromium.org/issues/499862965",
+ "testcase_ids": [
+  "6536054119104512"
+ ],
+ "downloaded": [
+  "6536054119104512"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 519652102,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Bytecode mismatch at offset 0 in interpreter.cc",
+ "url": "https://issues.chromium.org/issues/519652102",
+ "testcase_ids": [
+  "5880754231869440"
+ ],
+ "downloaded": [
+  "5880754231869440"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "issue_id": 344009080,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Abrt in v8::internal::__RT_impl_Runtime_Abort",
+ "url": "https://issues.chromium.org/issues/344009080",
+ "testcase_ids": [
+  "5964091339243520"
+ ],
+ "downloaded": [
+  "5964091339243520"
+ ]
+}

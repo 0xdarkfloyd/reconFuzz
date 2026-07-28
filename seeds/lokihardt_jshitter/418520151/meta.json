@@ -1,0 +1,12 @@
+{
+ "issue_id": 418520151,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "CHECK failure: IsSmi(value) || IsTheHole(value, isolate) in objects-debug.cc",
+ "url": "https://issues.chromium.org/issues/418520151",
+ "testcase_ids": [
+  "6517631926337536"
+ ],
+ "downloaded": [
+  "6517631926337536"
+ ]
+}

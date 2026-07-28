@@ -1,0 +1,12 @@
+{
+ "issue_id": 460204586,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in allowed_input_type == NodeType::kNumberOrUndefined || allowed_input_type == Node",
+ "url": "https://issues.chromium.org/issues/460204586",
+ "testcase_ids": [
+  "5598732326207488"
+ ],
+ "downloaded": [
+  "5598732326207488"
+ ]
+}

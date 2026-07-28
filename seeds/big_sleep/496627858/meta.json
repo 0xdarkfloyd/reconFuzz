@@ -1,0 +1,12 @@
+{
+ "issue_id": 496627858,
+ "fuzzer": "big_sleep",
+ "title": "CHECK failure: max_arguments <= Code::kMaxArguments in bytecode-array-builder.h",
+ "url": "https://issues.chromium.org/issues/496627858",
+ "testcase_ids": [
+  "6179873487880192"
+ ],
+ "downloaded": [
+  "6179873487880192"
+ ]
+}

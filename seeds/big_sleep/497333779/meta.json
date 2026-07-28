@@ -1,0 +1,12 @@
+{
+ "issue_id": 497333779,
+ "fuzzer": "big_sleep",
+ "title": "Unreachable code in turboshaft-graph-interface.cc",
+ "url": "https://issues.chromium.org/issues/497333779",
+ "testcase_ids": [
+  "5724584875687936"
+ ],
+ "downloaded": [
+  "5724584875687936"
+ ]
+}

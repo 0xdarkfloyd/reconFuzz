@@ -1,0 +1,12 @@
+{
+ "issue_id": 40945827,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "DCHECK failure in is_loadable() in maglev-ir.h",
+ "url": "https://issues.chromium.org/issues/40945827",
+ "testcase_ids": [
+  "4666945299742720"
+ ],
+ "downloaded": [
+  "4666945299742720"
+ ]
+}

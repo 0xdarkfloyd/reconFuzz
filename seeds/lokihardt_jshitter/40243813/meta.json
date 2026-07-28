@@ -1,0 +1,12 @@
+{
+ "issue_id": 40243813,
+ "fuzzer": "lokihardt_jshitter",
+ "title": "Fatal error in SimplifiedLoweringVerifierError: invalid combination of input types Boolean, Sig",
+ "url": "https://issues.chromium.org/issues/40243813",
+ "testcase_ids": [
+  "4575783231356928"
+ ],
+ "downloaded": [
+  "4575783231356928"
+ ]
+}

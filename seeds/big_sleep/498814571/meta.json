@@ -1,0 +1,12 @@
+{
+ "issue_id": 498814571,
+ "fuzzer": "big_sleep",
+ "title": "Fatal error in Type cast failed in Parameter 0 at ../../src/builtins/builtins-internal-gen.cc:1",
+ "url": "https://issues.chromium.org/issues/498814571",
+ "testcase_ids": [
+  "6447193695223808"
+ ],
+ "downloaded": [
+  "6447193695223808"
+ ]
+}

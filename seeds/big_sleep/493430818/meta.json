@@ -1,0 +1,12 @@
+{
+ "issue_id": 493430818,
+ "fuzzer": "big_sleep",
+ "title": "ASSERT: CSA_DCHECK failed: Torque assert 'exception != kWasmNull' failed",
+ "url": "https://issues.chromium.org/issues/493430818",
+ "testcase_ids": [
+  "4915686707068928"
+ ],
+ "downloaded": [
+  "4915686707068928"
+ ]
+}
