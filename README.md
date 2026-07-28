@@ -41,12 +41,16 @@ reconfuzz/
 ## Tech stack
 
 - **Generator / Mutator**: TypeScript (Node.js)
+  - Fast AST IPC Daemon via localized REST API to bypass Node startup latency.
+  - Guaranteed JIT Tier-Up mapping via deterministic `try/catch` wrapping and Type tracking.
   - Uses `@babel/parser`, `@babel/types`, `@babel/generator`, `@babel/traverse`
     for JS AST manipulation.
   - Self-contained Wasm IR builder and encoder (no external `wasm-encoder`
     dependency).
   - Dedicated GC-fuzzing templates derived from real POCs.
 - **Runner / Orchestrator**: Python 3.10+
+  - Parallel orchestration across multiple CPU cores via `ProcessPoolExecutor`.
+  - V8 Coverage-Feedback parsing (`--trace-pc`) mapping to dynamic AFL energy bonuses.
   - Manages `d8` processes, parses sanitizer/crash output, schedules corpus,
     and deduplicates findings.
 

@@ -20,6 +20,7 @@ class D8Result:
     stderr: str
     timed_out: bool
     duration_ms: float
+    coverage_hash: str | None
 
 
 class D8Wrapper:
@@ -33,10 +34,28 @@ class D8Wrapper:
     ) -> None:
         self.d8_path = Path(d8_path)
         self.timeout_seconds = timeout_seconds
-        self.default_flags = list(default_flags or ["--allow-natives-syntax"])
+        # Add --trace-pc for coverage tracking
+        self.default_flags = list(default_flags or ["--allow-natives-syntax", "--trace-pc"])
 
         if not self.d8_path.exists():
             raise FileNotFoundError(f"d8 not found at {self.d8_path}")
+
+    def _extract_coverage(self, stdout: str) -> str | None:
+        """Extract a simplified coverage hash from V8's --trace-pc output."""
+        # --trace-pc output is extremely verbose, usually looks like:
+        # 0x7fa2b6e14a1f
+        # 0x7fa2b6e14a27
+        # We can extract just the addresses to compute a distinct trace profile.
+        import hashlib
+        pcs = []
+        for line in stdout.splitlines():
+            if line.startswith("0x"):
+                pcs.append(line)
+        
+        if pcs:
+            # Create a short hash of the PC trace as a coverage identifier
+            return hashlib.md5("".join(pcs).encode()).hexdigest()[:16]
+        return None
 
     def run(
         self,
@@ -47,6 +66,9 @@ class D8Wrapper:
         flags = list(self.default_flags)
         if extra_flags:
             flags.extend(extra_flags)
+
+        import time
+        start_time = time.perf_counter()
 
         with tempfile.NamedTemporaryFile(mode="w", suffix=".js", delete=False) as tmp:
             tmp.write(source)
@@ -73,12 +95,15 @@ class D8Wrapper:
                 stdout, stderr = proc.communicate()
                 timed_out = True
 
+            cov_hash = self._extract_coverage(stdout) if not timed_out else None
+
             return D8Result(
                 returncode=proc.returncode,
                 stdout=stdout,
                 stderr=stderr,
                 timed_out=timed_out,
-                duration_ms=0.0,  # Could be measured with time.perf_counter.
+                duration_ms=(time.perf_counter() - start_time) * 1000.0,
+                coverage_hash=cov_hash,
             )
         finally:
             tmp_path.unlink(missing_ok=True)

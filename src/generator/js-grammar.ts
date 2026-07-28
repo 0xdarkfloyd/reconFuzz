@@ -95,12 +95,12 @@ export class JsGrammar {
 
   generateStatement(scope: Scope, depth: number): t.Statement {
     if (depth <= 0) {
-      return this.generateExpressionStatement(scope, 1);
+      return this.generateTryCatchWrapped(this.generateExpressionStatement(scope, 1));
     }
 
     const choices: Array<() => t.Statement> = [
       (): t.Statement => this.generateVariableDeclaration(scope, depth - 1),
-      (): t.Statement => this.generateExpressionStatement(scope, depth - 1),
+      (): t.Statement => this.generateTryCatchWrapped(this.generateExpressionStatement(scope, depth - 1)),
       (): t.Statement => this.generateForLoop(scope, depth - 1),
       (): t.Statement => this.generateIfStatement(scope, depth - 1),
       (): t.Statement => this.generateTryCatch(scope, depth - 1),
@@ -116,6 +116,13 @@ export class JsGrammar {
     }
 
     return this.pick(choices)();
+  }
+
+  private generateTryCatchWrapped(stmt: t.Statement): t.TryStatement {
+    return t.tryStatement(
+      t.blockStatement([stmt]),
+      t.catchClause(t.identifier('e'), t.blockStatement([]))
+    );
   }
 
   generateVariableDeclaration(scope: Scope, depth: number): t.VariableDeclaration {

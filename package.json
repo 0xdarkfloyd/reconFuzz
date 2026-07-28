@@ -11,6 +11,7 @@
     "test:watch": "jest --watch",
     "lint": "eslint src/**/*.ts tests/**/*.ts",
     "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "server": "node dist/generator/server.js",
     "generate": "node dist/generator/index.js",
     "generate:gc": "node dist/generator/index.js --mode gc-only",
     "mutate": "node dist/mutator/index.js"
