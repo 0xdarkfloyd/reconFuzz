@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reconfuzz-runner"
+version = "0.1.0"
+description = "Runner and orchestrator for the reconfuzz V8 fuzzer"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Security",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "psutil>=5.9.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "mypy>=1.5.0",
+    "ruff>=0.1.0",
+    "types-psutil>=5.9.0",
+    "types-PyYAML>=6.0",
+]
+
+[project.scripts]
+reconfuzz-reproduce = "scripts.reproduce:main"
+reconfuzz-fuzz = "scripts.fuzz:main"
+reconfuzz-fuzz-gc = "scripts.fuzz_gc:main"
+reconfuzz-import-corpus = "scripts.import_corpus:main"
+reconfuzz-setup-v8 = "scripts.setup_v8:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*", "scripts*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+explicit_package_bases = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "--cov=src/runner --cov-report=term-missing"

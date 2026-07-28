@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.egg-info/
+.venv/
+venv/
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+tests/*.js
+tests/*.d.ts
+tests/*.map
+
+# Test outputs
+coverage/
+.pytest_cache/
+.nyc_output/
+.ruff_cache/
+.mypy_cache/
+.coverage
+
+# Runtime artifacts
+corpus/
+crashes/
+logs/
+tmp/
+*.log
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
