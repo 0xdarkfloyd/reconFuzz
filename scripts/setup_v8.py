@@ -24,6 +24,21 @@ import sys
 from pathlib import Path
 
 
+def positive_int(value: str) -> int:
+    """Parse a strictly positive integer for command-line arguments."""
+    parsed = int(value)
+    if parsed <= 0:
+        raise argparse.ArgumentTypeError("must be greater than zero")
+    return parsed
+
+
+def nonempty_string(value: str) -> str:
+    """Reject empty or whitespace-only command-line values."""
+    if not value.strip():
+        raise argparse.ArgumentTypeError("must not be empty")
+    return value
+
+
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Download and build V8 for reconfuzz")
     parser.add_argument(
@@ -34,7 +49,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--branch",
-        type=str,
+        type=nonempty_string,
         default="main",
         help="V8 branch or tag to sync (default: main)",
     )
@@ -46,7 +61,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--jobs",
-        type=int,
+        type=positive_int,
         default=None,
         help="Number of parallel ninja jobs (default: auto)",
     )
@@ -61,6 +76,31 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="Sync only; do not compile",
     )
     return parser
+
+
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    """Parse arguments and normalize the work directory."""
+    parser = build_arg_parser()
+    args = parser.parse_args(argv)
+    workdir = args.workdir.expanduser()
+
+    if workdir.is_symlink() and not args.no_clobber:
+        parser.error("--workdir must not be a symbolic link when clobbering")
+
+    try:
+        workdir = workdir.resolve()
+    except OSError as exc:
+        parser.error(f"invalid --workdir: {exc}")
+
+    if workdir.exists() and not workdir.is_dir():
+        parser.error("--workdir must be a directory")
+
+    current_dir = Path.cwd().resolve()
+    if not args.no_clobber and (workdir == current_dir or workdir in current_dir.parents):
+        parser.error("--workdir must not contain the current directory when clobbering")
+
+    args.workdir = workdir
+    return args
 
 
 def run(cmd: list[str], cwd: Path | None = None, env: dict[str, str] | None = None) -> None:
@@ -198,13 +238,13 @@ def print_summary(v8_dir: Path, out_dir: Path) -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
-    args = build_arg_parser().parse_args(argv)
-
-    if args.workdir.exists() and not args.no_clobber:
-        print(f"[setup] removing existing workdir: {args.workdir}")
-        shutil.rmtree(args.workdir, ignore_errors=True)
+    args = parse_args(argv)
 
     try:
+        if args.workdir.exists() and not args.no_clobber:
+            print(f"[setup] removing existing workdir: {args.workdir}")
+            shutil.rmtree(args.workdir)
+
         ensure_depot_tools(args.workdir)
         v8_dir = sync_v8(args.workdir, args.branch)
         install_build_deps(v8_dir)
@@ -215,6 +255,9 @@ def main(argv: list[str] | None = None) -> int:
 
         print_summary(v8_dir, out_dir)
     except subprocess.CalledProcessError as exc:
+        print(f"[setup] failed: {exc}", file=sys.stderr)
+        return 1
+    except OSError as exc:
         print(f"[setup] failed: {exc}", file=sys.stderr)
         return 1
 

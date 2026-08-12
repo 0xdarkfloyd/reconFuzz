@@ -18,10 +18,37 @@
  */
 import * as t from '@babel/types';
 import { ReconfuzzProgram } from './ast';
+import { mulberry32 } from './js-grammar';
 
 export interface GcTemplate {
   name: string;
-  build(): ReconfuzzProgram;
+  build(seed?: number): ReconfuzzProgram;
+}
+
+const MAX_LOOP_ITERATIONS = 1_000;
+
+/** Keep externally supplied seeds deterministic without allowing invalid AST values. */
+function normalizeSeed(seed: number | undefined): number {
+  if (typeof seed !== 'number' || !Number.isFinite(seed)) return 0;
+  return Math.trunc(seed) >>> 0;
+}
+
+function makeRng(seed: number): () => number {
+  return mulberry32(normalizeSeed(seed) ^ 0x5bd1e995);
+}
+
+function randInt(rng: () => number, lo: number, hi: number): number {
+  if (!Number.isSafeInteger(lo) || !Number.isSafeInteger(hi) || lo > hi) {
+    throw new RangeError('Random integer bounds must be safe integers with lo <= hi');
+  }
+  return Math.floor(rng() * (hi - lo + 1)) + lo;
+}
+
+function pick<T>(rng: () => number, arr: readonly T[]): T {
+  if (arr.length === 0) {
+    throw new RangeError('Cannot pick from an empty array');
+  }
+  return arr[randInt(rng, 0, arr.length - 1)];
 }
 
 function gcCall(): t.ExpressionStatement {
@@ -29,6 +56,13 @@ function gcCall(): t.ExpressionStatement {
 }
 
 function loop(body: t.Statement[], count = 100): t.ForStatement {
+  if (!Array.isArray(body) || body.some((statement) => !t.isStatement(statement))) {
+    throw new TypeError('GC loop body must contain valid statements');
+  }
+  if (!Number.isSafeInteger(count) || count < 0 || count > MAX_LOOP_ITERATIONS) {
+    throw new RangeError(`GC loop count must be an integer between 0 and ${MAX_LOOP_ITERATIONS}`);
+  }
+
   const i = '__i';
   return t.forStatement(
     t.variableDeclaration('let', [t.variableDeclarator(t.identifier(i), t.numericLiteral(0))]),
@@ -45,7 +79,11 @@ function loop(body: t.Statement[], count = 100): t.ForStatement {
 export class WasmInstanceGcTemplate implements GcTemplate {
   readonly name = 'wasm-instance-gc';
 
-  build(): ReconfuzzProgram {
+  build(seed = 0): ReconfuzzProgram {
+    const rng = makeRng(seed);
+    const loopCount = randInt(rng, 10, 80);
+    const gcCadence = pick(rng, [4, 8, 10, 16] as const);
+    const instancesPerIteration = randInt(rng, 1, 4);
     const body: t.Statement[] = [
       t.variableDeclaration('const', [
         t.variableDeclarator(
@@ -66,39 +104,54 @@ export class WasmInstanceGcTemplate implements GcTemplate {
       ]),
       loop(
         [
-          t.variableDeclaration('const', [
-            t.variableDeclarator(
-              t.identifier('module'),
-              t.newExpression(
-                t.memberExpression(t.identifier('WebAssembly'), t.identifier('Module')),
-                [t.identifier('bytes')],
-              ),
-            ),
-          ]),
-          t.tryStatement(
-            t.blockStatement([
-              t.variableDeclaration('const', [
-                t.variableDeclarator(
-                  t.identifier('instance'),
-                  t.newExpression(
-                    t.memberExpression(t.identifier('WebAssembly'), t.identifier('Instance')),
-                    [t.identifier('module'), t.objectExpression([])],
-                  ),
-                ),
-              ]),
-              t.expressionStatement(t.memberExpression(t.identifier('instance'), t.identifier('exports'))),
+          t.forStatement(
+            t.variableDeclaration('let', [
+              t.variableDeclarator(t.identifier('__instanceIndex'), t.numericLiteral(0)),
             ]),
-            t.catchClause(t.identifier('e'), t.blockStatement([])),
+            t.binaryExpression(
+              '<',
+              t.identifier('__instanceIndex'),
+              t.numericLiteral(instancesPerIteration),
+            ),
+            t.updateExpression('++', t.identifier('__instanceIndex'), false),
+            t.blockStatement([
+              t.tryStatement(
+                t.blockStatement([
+                  t.variableDeclaration('const', [
+                    t.variableDeclarator(
+                      t.identifier('module'),
+                      t.newExpression(
+                        t.memberExpression(t.identifier('WebAssembly'), t.identifier('Module')),
+                        [t.identifier('bytes')],
+                      ),
+                    ),
+                  ]),
+                  t.variableDeclaration('const', [
+                    t.variableDeclarator(
+                      t.identifier('instance'),
+                      t.newExpression(
+                        t.memberExpression(t.identifier('WebAssembly'), t.identifier('Instance')),
+                        [t.identifier('module'), t.objectExpression([])],
+                      ),
+                    ),
+                  ]),
+                  t.expressionStatement(
+                    t.memberExpression(t.identifier('instance'), t.identifier('exports')),
+                  ),
+                ]),
+                t.catchClause(t.identifier('e'), t.blockStatement([])),
+              ),
+            ]),
           ),
           t.expressionStatement(
             t.conditionalExpression(
-              t.binaryExpression('===', t.binaryExpression('%', t.identifier('__i'), t.numericLiteral(10)), t.numericLiteral(0)),
+              t.binaryExpression('===', t.binaryExpression('%', t.identifier('__i'), t.numericLiteral(gcCadence)), t.numericLiteral(0)),
               t.callExpression(t.identifier('gc'), []),
               t.unaryExpression('void', t.numericLiteral(0)),
             ),
           ),
         ],
-        50,
+        loopCount,
       ),
     ];
 
@@ -118,7 +171,12 @@ export class WasmInstanceGcTemplate implements GcTemplate {
 export class ArrayBufferDetachGcTemplate implements GcTemplate {
   readonly name = 'arraybuffer-detach-gc';
 
-  build(): ReconfuzzProgram {
+  build(seed = 0): ReconfuzzProgram {
+    const rng = makeRng(seed);
+    const loopCount = randInt(rng, 10, 80);
+    const bufferSize = randInt(rng, 64, 8_192);
+    const viewCount = randInt(rng, 1, 6);
+    const gcCadence = randInt(rng, 3, 16);
     const body: t.Statement[] = [
       t.functionDeclaration(
         t.identifier('stress'),
@@ -127,13 +185,17 @@ export class ArrayBufferDetachGcTemplate implements GcTemplate {
           t.variableDeclaration('const', [
             t.variableDeclarator(
               t.identifier('ab'),
-              t.newExpression(t.identifier('ArrayBuffer'), [t.numericLiteral(1024)]),
+              t.newExpression(t.identifier('ArrayBuffer'), [t.numericLiteral(bufferSize)]),
             ),
           ]),
           t.variableDeclaration('const', [
             t.variableDeclarator(
-              t.identifier('view'),
-              t.newExpression(t.identifier('DataView'), [t.identifier('ab')]),
+              t.identifier('views'),
+              t.arrayExpression(
+                Array.from({ length: viewCount }, () =>
+                  t.newExpression(t.identifier('DataView'), [t.identifier('ab')]),
+                ),
+              ),
             ),
           ]),
           t.expressionStatement(
@@ -142,17 +204,36 @@ export class ArrayBufferDetachGcTemplate implements GcTemplate {
           t.tryStatement(
             t.blockStatement([
               t.expressionStatement(
-                t.callExpression(t.memberExpression(t.identifier('view'), t.identifier('getUint8')), [
-                  t.numericLiteral(0),
-                ]),
+                t.callExpression(
+                  t.memberExpression(
+                    t.memberExpression(
+                      t.identifier('views'),
+                      t.numericLiteral(0),
+                      true,
+                    ),
+                    t.identifier('getUint8'),
+                  ),
+                  [t.numericLiteral(0)],
+                ),
               ),
             ]),
             t.catchClause(t.identifier('e'), t.blockStatement([])),
           ),
-          gcCall(),
         ]),
       ),
-      loop([t.expressionStatement(t.callExpression(t.identifier('stress'), []))], 20),
+      loop(
+        [
+          t.expressionStatement(t.callExpression(t.identifier('stress'), [])),
+          t.expressionStatement(
+            t.conditionalExpression(
+              t.binaryExpression('===', t.binaryExpression('%', t.identifier('__i'), t.numericLiteral(gcCadence)), t.numericLiteral(0)),
+              t.callExpression(t.identifier('gc'), []),
+              t.unaryExpression('void', t.numericLiteral(0)),
+            ),
+          ),
+        ],
+        loopCount,
+      ),
     ];
 
     return {
@@ -171,7 +252,37 @@ export class ArrayBufferDetachGcTemplate implements GcTemplate {
 export class WeakCollectionGcTemplate implements GcTemplate {
   readonly name = 'weak-collection-gc';
 
-  build(): ReconfuzzProgram {
+  build(seed = 0): ReconfuzzProgram {
+    const rng = makeRng(seed);
+    const loopCount = randInt(rng, 10, 80);
+    const graphDepth = randInt(rng, 2, 8);
+    const hasSecondChild = pick(rng, [false, true] as const);
+    const entriesPerIteration = randInt(rng, 1, 4);
+    const gcCadence = randInt(rng, 3, 16);
+    const childAssignments: t.Statement[] = [
+      t.expressionStatement(
+        t.assignmentExpression(
+          '=',
+          t.memberExpression(t.identifier('obj'), t.identifier('child')),
+          t.callExpression(t.identifier('makeGraph'), [
+            t.binaryExpression('-', t.identifier('depth'), t.numericLiteral(1)),
+          ]),
+        ),
+      ),
+    ];
+    if (hasSecondChild) {
+      childAssignments.push(
+        t.expressionStatement(
+          t.assignmentExpression(
+            '=',
+            t.memberExpression(t.identifier('obj'), t.identifier('secondChild')),
+            t.callExpression(t.identifier('makeGraph'), [
+              t.binaryExpression('-', t.identifier('depth'), t.numericLiteral(1)),
+            ]),
+          ),
+        ),
+      );
+    }
     const body: t.Statement[] = [
       t.variableDeclaration('const', [
         t.variableDeclarator(t.identifier('wm'), t.newExpression(t.identifier('WeakMap'), [])),
@@ -188,17 +299,7 @@ export class WeakCollectionGcTemplate implements GcTemplate {
           ]),
           t.ifStatement(
             t.binaryExpression('>', t.identifier('depth'), t.numericLiteral(0)),
-            t.blockStatement([
-              t.expressionStatement(
-                t.assignmentExpression(
-                  '=',
-                  t.memberExpression(t.identifier('obj'), t.identifier('child')),
-                  t.callExpression(t.identifier('makeGraph'), [
-                    t.binaryExpression('-', t.identifier('depth'), t.numericLiteral(1)),
-                  ]),
-                ),
-              ),
-            ]),
+            t.blockStatement(childAssignments),
             null,
           ),
           t.returnStatement(t.identifier('obj')),
@@ -206,39 +307,51 @@ export class WeakCollectionGcTemplate implements GcTemplate {
       ),
       loop(
         [
-          t.variableDeclaration('let', [
-            t.variableDeclarator(
-              t.identifier('root'),
-              t.callExpression(t.identifier('makeGraph'), [t.numericLiteral(5)]),
-            ),
-          ]),
-          t.expressionStatement(
-            t.callExpression(t.memberExpression(t.identifier('wm'), t.identifier('set')), [
-              t.identifier('root'),
-              t.objectExpression([t.objectProperty(t.identifier('index'), t.identifier('__i'))]),
+          t.forStatement(
+            t.variableDeclaration('let', [
+              t.variableDeclarator(t.identifier('__entry'), t.numericLiteral(0)),
             ]),
-          ),
-          t.expressionStatement(
-            t.callExpression(t.memberExpression(t.identifier('ws'), t.identifier('add')), [
-              t.memberExpression(t.identifier('root'), t.identifier('child')),
-            ]),
-          ),
-          t.expressionStatement(
-            t.assignmentExpression(
-              '=',
-              t.identifier('root'),
-              t.nullLiteral(),
+            t.binaryExpression(
+              '<',
+              t.identifier('__entry'),
+              t.numericLiteral(entriesPerIteration),
             ),
+            t.updateExpression('++', t.identifier('__entry'), false),
+            t.blockStatement([
+              t.variableDeclaration('let', [
+                t.variableDeclarator(
+                  t.identifier('root'),
+                  t.callExpression(t.identifier('makeGraph'), [t.numericLiteral(graphDepth)]),
+                ),
+              ]),
+              t.expressionStatement(
+                t.callExpression(t.memberExpression(t.identifier('wm'), t.identifier('set')), [
+                  t.identifier('root'),
+                  t.objectExpression([
+                    t.objectProperty(t.identifier('index'), t.identifier('__i')),
+                    t.objectProperty(t.identifier('entry'), t.identifier('__entry')),
+                  ]),
+                ]),
+              ),
+              t.expressionStatement(
+                t.callExpression(t.memberExpression(t.identifier('ws'), t.identifier('add')), [
+                  t.memberExpression(t.identifier('root'), t.identifier('child')),
+                ]),
+              ),
+              t.expressionStatement(
+                t.assignmentExpression('=', t.identifier('root'), t.nullLiteral()),
+              ),
+            ]),
           ),
           t.expressionStatement(
             t.conditionalExpression(
-              t.binaryExpression('===', t.binaryExpression('%', t.identifier('__i'), t.numericLiteral(7)), t.numericLiteral(0)),
+              t.binaryExpression('===', t.binaryExpression('%', t.identifier('__i'), t.numericLiteral(gcCadence)), t.numericLiteral(0)),
               t.callExpression(t.identifier('gc'), []),
               t.unaryExpression('void', t.numericLiteral(0)),
             ),
           ),
         ],
-        30,
+        loopCount,
       ),
     ];
 
@@ -258,7 +371,12 @@ export class WeakCollectionGcTemplate implements GcTemplate {
 export class FinalizationRegistryGcTemplate implements GcTemplate {
   readonly name = 'finalization-registry-gc';
 
-  build(): ReconfuzzProgram {
+  build(seed = 0): ReconfuzzProgram {
+    const rng = makeRng(seed);
+    const loopCount = randInt(rng, 10, 80);
+    const registerStride = randInt(rng, 1, 4);
+    const unregisterCadence = randInt(rng, 2, 8);
+    const gcCadence = randInt(rng, 3, 16);
     const body: t.Statement[] = [
       t.variableDeclaration('const', [
         t.variableDeclarator(
@@ -277,45 +395,51 @@ export class FinalizationRegistryGcTemplate implements GcTemplate {
       ]),
       loop(
         [
-          t.variableDeclaration('let', [
-            t.variableDeclarator(
-              t.identifier('target'),
-              t.objectExpression([t.objectProperty(t.identifier('i'), t.identifier('__i'))]),
-            ),
-          ]),
-          t.variableDeclaration('const', [
-            t.variableDeclarator(t.identifier('token'), t.objectExpression([])),
-          ]),
-          t.expressionStatement(
-            t.callExpression(t.memberExpression(t.identifier('registry'), t.identifier('register')), [
-              t.identifier('target'),
-              t.identifier('__i'),
-              t.identifier('token'),
-            ]),
-          ),
           t.ifStatement(
-            t.binaryExpression('===', t.binaryExpression('%', t.identifier('__i'), t.numericLiteral(3)), t.numericLiteral(0)),
+            t.binaryExpression('===', t.binaryExpression('%', t.identifier('__i'), t.numericLiteral(registerStride)), t.numericLiteral(0)),
             t.blockStatement([
+              t.variableDeclaration('let', [
+                t.variableDeclarator(
+                  t.identifier('target'),
+                  t.objectExpression([t.objectProperty(t.identifier('i'), t.identifier('__i'))]),
+                ),
+              ]),
+              t.variableDeclaration('const', [
+                t.variableDeclarator(t.identifier('token'), t.objectExpression([])),
+              ]),
               t.expressionStatement(
-                t.callExpression(t.memberExpression(t.identifier('registry'), t.identifier('unregister')), [
+                t.callExpression(t.memberExpression(t.identifier('registry'), t.identifier('register')), [
+                  t.identifier('target'),
+                  t.identifier('__i'),
                   t.identifier('token'),
                 ]),
+              ),
+              t.ifStatement(
+                t.binaryExpression('===', t.binaryExpression('%', t.identifier('__i'), t.numericLiteral(unregisterCadence)), t.numericLiteral(0)),
+                t.blockStatement([
+                  t.expressionStatement(
+                    t.callExpression(t.memberExpression(t.identifier('registry'), t.identifier('unregister')), [
+                      t.identifier('token'),
+                    ]),
+                  ),
+                ]),
+                null,
+              ),
+              t.expressionStatement(
+                t.assignmentExpression('=', t.identifier('target'), t.nullLiteral()),
               ),
             ]),
             null,
           ),
           t.expressionStatement(
-            t.assignmentExpression('=', t.identifier('target'), t.nullLiteral()),
-          ),
-          t.expressionStatement(
             t.conditionalExpression(
-              t.binaryExpression('===', t.binaryExpression('%', t.identifier('__i'), t.numericLiteral(5)), t.numericLiteral(0)),
+              t.binaryExpression('===', t.binaryExpression('%', t.identifier('__i'), t.numericLiteral(gcCadence)), t.numericLiteral(0)),
               t.callExpression(t.identifier('gc'), []),
               t.unaryExpression('void', t.numericLiteral(0)),
             ),
           ),
         ],
-        40,
+        loopCount,
       ),
     ];
 
@@ -335,16 +459,21 @@ export class FinalizationRegistryGcTemplate implements GcTemplate {
 export class SharedArrayBufferGcTemplate implements GcTemplate {
   readonly name = 'sharedarraybuffer-gc';
 
-  build(): ReconfuzzProgram {
+  build(seed = 0): ReconfuzzProgram {
+    const rng = makeRng(seed);
+    const loopCount = randInt(rng, 10, 80);
+    const bufferSize = randInt(rng, 16, 1_024) * 4;
+    const attemptCount = randInt(rng, 1, 4);
+    const gcCadence = randInt(rng, 3, 16);
     const body: t.Statement[] = [
       t.functionDeclaration(
         t.identifier('test'),
-        [],
+        [t.identifier('iteration')],
         t.blockStatement([
           t.variableDeclaration('const', [
             t.variableDeclarator(
               t.identifier('sab'),
-              t.newExpression(t.identifier('SharedArrayBuffer'), [t.numericLiteral(1024)]),
+              t.newExpression(t.identifier('SharedArrayBuffer'), [t.numericLiteral(bufferSize)]),
             ),
           ]),
           t.variableDeclaration('const', [
@@ -353,46 +482,81 @@ export class SharedArrayBufferGcTemplate implements GcTemplate {
               t.newExpression(t.identifier('Int32Array'), [t.identifier('sab')]),
             ),
           ]),
-          t.tryStatement(
+          t.forStatement(
+            t.variableDeclaration('let', [
+              t.variableDeclarator(t.identifier('__attempt'), t.numericLiteral(0)),
+            ]),
+            t.binaryExpression('<', t.identifier('__attempt'), t.numericLiteral(attemptCount)),
+            t.updateExpression('++', t.identifier('__attempt'), false),
             t.blockStatement([
-              t.expressionStatement(
-                t.callExpression(t.memberExpression(t.identifier('Atomics'), t.identifier('waitAsync')), [
-                  t.identifier('i32'),
-                  t.numericLiteral(0),
-                  t.numericLiteral(0),
+              t.tryStatement(
+                t.blockStatement([
+                  t.variableDeclaration('const', [
+                    t.variableDeclarator(
+                      t.identifier('__waitResult'),
+                      t.callExpression(t.memberExpression(t.identifier('Atomics'), t.identifier('waitAsync')), [
+                        t.identifier('i32'),
+                        t.numericLiteral(0),
+                        t.numericLiteral(0),
+                        t.numericLiteral(10),
+                      ]),
+                    ),
+                  ]),
+                  t.ifStatement(
+                    t.memberExpression(t.identifier('__waitResult'), t.identifier('async')),
+                    t.blockStatement([
+                      t.expressionStatement(
+                        t.callExpression(
+                          t.memberExpression(
+                            t.memberExpression(t.identifier('__waitResult'), t.identifier('value')),
+                            t.identifier('then'),
+                          ),
+                          [t.arrowFunctionExpression([], t.blockStatement([]))],
+                        ),
+                      ),
+                    ]),
+                  ),
                 ]),
+                t.catchClause(t.identifier('e'), t.blockStatement([])),
               ),
             ]),
-            t.catchClause(t.identifier('e'), t.blockStatement([])),
           ),
-          gcCall(),
-          t.variableDeclaration('const', [
-            t.variableDeclarator(
-              t.identifier('sab2'),
-              t.newExpression(t.identifier('SharedArrayBuffer'), [t.numericLiteral(1024)]),
-            ),
-          ]),
-          t.variableDeclaration('const', [
-            t.variableDeclarator(
-              t.identifier('i32_2'),
-              t.newExpression(t.identifier('Int32Array'), [t.identifier('sab2')]),
-            ),
-          ]),
-          t.tryStatement(
+          t.ifStatement(
+            t.binaryExpression('===', t.binaryExpression('%', t.identifier('iteration'), t.numericLiteral(gcCadence)), t.numericLiteral(0)),
+            t.blockStatement([gcCall()]),
+            null,
+          ),
+          t.forStatement(
+            t.variableDeclaration('let', [
+              t.variableDeclarator(t.identifier('__notifyAttempt'), t.numericLiteral(0)),
+            ]),
+            t.binaryExpression('<', t.identifier('__notifyAttempt'), t.numericLiteral(attemptCount)),
+            t.updateExpression('++', t.identifier('__notifyAttempt'), false),
             t.blockStatement([
-              t.expressionStatement(
-                t.callExpression(t.memberExpression(t.identifier('Atomics'), t.identifier('notify')), [
-                  t.identifier('i32_2'),
-                  t.numericLiteral(0),
-                  t.numericLiteral(1),
+              t.tryStatement(
+                t.blockStatement([
+                  t.expressionStatement(
+                    t.callExpression(t.memberExpression(t.identifier('Atomics'), t.identifier('notify')), [
+                      t.identifier('i32'),
+                      t.numericLiteral(0),
+                      t.numericLiteral(1),
+                    ]),
+                  ),
                 ]),
+                t.catchClause(t.identifier('e'), t.blockStatement([])),
               ),
             ]),
-            t.catchClause(t.identifier('e'), t.blockStatement([])),
           ),
         ]),
       ),
-      loop([t.expressionStatement(t.callExpression(t.identifier('test'), []))], 10),
+      loop(
+        [
+          t.expressionStatement(
+            t.callExpression(t.identifier('test'), [t.identifier('__i')]),
+          ),
+        ],
+        loopCount,
+      ),
     ];
 
     return {

@@ -19,8 +19,8 @@ parser, compiler, runtime, sandbox, WebAssembly, and garbage-collector bugs.
    during Wasm instantiation.
 4. **Detects crashes, sanitizer reports, and V8-specific failure signatures**
    when running generated testcases under `d8`.
-5. **Schedules and deduplicates** interesting seeds using AFL-style energy
-   assignment and stack-hash deduplication.
+5. **Schedules and deduplicates** interesting seeds using AFL-style energy,
+   coverage novelty, and crash-signature deduplication.
 
 ## Repository layout
 
@@ -50,7 +50,16 @@ reconfuzz/
   - Dedicated GC-fuzzing templates derived from real POCs.
 - **Runner / Orchestrator**: Python 3.10+
   - Parallel orchestration across multiple CPU cores via `ProcessPoolExecutor`.
-  - V8 Coverage-Feedback parsing (`--trace-pc`) mapping to dynamic AFL energy bonuses.
+  - Coverage feedback from Fuzzilli-instrumented d8 builds (`v8_fuzzilli=true`):
+    the runner hands each `d8` process a shared-memory edge bitmap via
+    `SHM_ID` and reads native edge coverage back directly. d8 LCOV/block-count
+    output is used as a fallback; builds without a supported coverage channel
+    report coverage as unavailable rather than treating source identity as
+    execution feedback.
+  - Corpus admission is coverage-gain based by default (`--admission gain`):
+    a testcase is retained for replay/mutation only when its edge bitmap
+    covers at least one globally new edge. `--admission hash` falls back to
+    exact-coverage-hash novelty.
   - Manages `d8` processes, parses sanitizer/crash output, schedules corpus,
     and deduplicates findings.
 

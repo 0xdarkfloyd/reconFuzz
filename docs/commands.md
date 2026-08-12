@@ -30,20 +30,33 @@ python scripts/fuzz.py [options]
 
 | Option | Default | Description |
 |---|---|---|
-| `--d8 PATH` | none | d8 binary; omit for dry-run |
+| `--d8 PATH` | `~/v8/v8/out/fuzzbuild/d8` | d8 binary; dry-run if missing |
 | `--corpus PATH` | `seeds/corpus` | Corpus directory |
 | `--crashes PATH` | `seeds/crashes` | Crash directory |
-| `--iterations N` | `100` | Number of iterations |
+| `--iterations N` | `100` | Number of iterations (`0` = run continuously until Ctrl+C) |
+| `--batch-size N` | `4 x CPUs` | Tasks in flight per batch |
+| `--workers N` | CPU count | Worker processes |
 | `--mode {js-only,wasm-only,hybrid}` | `hybrid` | Generator mode |
 | `--seed N` | random | Random seed |
 | `--timeout SECONDS` | `10.0` | d8 timeout |
 | `--scheduler-config PATH` | none | YAML scheduler config |
+| `--replay-prob P` | `0.25` | Probability of selecting a corpus seed |
+| `--crossover-prob P` | `0.5` | Fraction of replays using crossover |
+| `--admission {gain,hash}` | `gain` | Corpus admission: retain on globally new edges (`gain`) or unseen exact coverage hash (`hash`) |
+| `--exec {reprl,process}` | `reprl` | Execution backend: `reprl` keeps one persistent d8 per worker via the Fuzzilli REPRL protocol (fast; fixed flag set, per-testcase `// Flags` ignored); `process` spawns a fresh d8 per testcase and honors per-testcase flags (slow fallback) |
+
+> **REPRL is the default.** It needs a Fuzzilli-instrumented build
+> (`v8_fuzzilli=true`); the runner auto-falls-back to `process` otherwise.
+> Throughput on a debug+dcheck+verify build is bounded by V8's per-execution
+> cost; a release/ASAN build is dramatically faster.
 
 Examples:
 
 ```bash
 python scripts/fuzz.py --iterations 100 --mode hybrid
 python scripts/fuzz.py --d8 ../third_party/v8/out/release/d8 --iterations 1000
+# Continuous pipeline: fuzz until Ctrl+C, stats printed after every batch
+python scripts/fuzz.py --d8 /path/to/d8 --iterations 0 --mode hybrid
 ```
 
 ### `scripts/fuzz_gc.py` — GC-focused loop

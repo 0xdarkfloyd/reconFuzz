@@ -71,15 +71,36 @@ Emits:
 
 Python modules:
 
-- `d8_wrapper.py`: spawn `d8`, enforce timeout, capture stdout/stderr/return
-  code, kill stale processes.
+- `d8_wrapper.py`: the `process` execution backend -- spawn a fresh `d8` per
+  testcase, enforce timeout, capture stdout/stderr/return code, collect
+  coverage, and kill stale processes. Fuzzilli-instrumented builds
+  (`v8_fuzzilli=true`) report native edge coverage through a shared-memory
+  bitmap passed via `SHM_ID` (auto-detected with `probe_shmem_coverage`);
+  other builds fall back to normalized LCOV output.
+- `reprl.py`: the `reprl` execution backend (default) -- keeps ONE persistent
+  `d8` per worker via Fuzzilli's REPRL protocol (FDs 100-103, HELO handshake,
+  `exec` action loop), feeding testcases over pipes and reading per-run edge
+  coverage from the shared-memory bitmap. This avoids re-initializing V8 for
+  every testcase, which is the dominant cost of the `process` path. Native
+  crashes (DCHECK/CHECK/segv) kill the child; the runner captures the
+  diagnostic, reports it as a crash, and respawns automatically.
+- `coverage_union.py`: a process-shared edge bitmap (`CoverageUnion`) used as
+  the gain-admission oracle. Mapped by the parent and every worker so gain
+  admission runs in the worker -- the ~300KB per-testcase bitmap never
+  travels back to the parent, which would otherwise make the parent the
+  throughput bottleneck. Monotonic OR; persisted to `coverage_union.bin`.
 - `detector.py`: classify output into crash type, sanitizer category,
   V8-specific signature, and stable stack hash.
-- `corpus_manager.py`: load/save seeds, track metadata, deduplicate by stack
-  hash.
+- `corpus_manager.py`: load/save seeds and deduplicate crashes by normalized
+  stack/signature. Two admission policies: `gain` retains a testcase only
+  when its edge bitmap covers at least one globally new edge; `hash` retains
+  on unseen exact coverage hashes. Under REPRL+gain the worker does the gain
+  check against the shared `CoverageUnion`; under `process` the parent does
+  it against its own copy of `coverage_union.bin`.
 - `scheduler.py`: AFL-style energy assignment, coverage novelty
   prioritization.
-- `harness.py`: high-level `run_source` / `evaluate` API.
+- `harness.py`: high-level `run_source` / `evaluate` API; runner-agnostic
+  (works with both `D8Wrapper` and `ReprlRunner`).
 
 ### 5. Harness helpers (`harness/v8-helpers.js`)
 
